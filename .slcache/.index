@@ -5204,3 +5204,5 @@ n:11498:org/springframework/web/servlet/view/AbstractView
 n:290:org/springframework/scripting/ScriptSource
 n:287:org/codehaus/groovy/grails/web/pages/discovery/GroovyPageScriptSource
 n:3359:org/codehaus/groovy/grails/web/pages/discovery/GroovyPageCompiledScriptSource
+n:1013:org/apache/tools/zip/ZipFile$1
+n:1565:org/slf4j/Logger$trace

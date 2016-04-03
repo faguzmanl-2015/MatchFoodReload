@@ -178,7 +178,7 @@
 			</ul>
 		</div>
 		<div id="page-body" role="main">
-			<h1>MatchFood</h1>
+			<h1>MatchFood</h1>j_spring_securi
 			<p>Please check in</p>
 
             <div id='login'>
