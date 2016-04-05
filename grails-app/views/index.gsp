@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main"/>
+		<meta charset="UTF-8" name="layout" content="main"/>
 		<title>MatchFood</title>
 		<style type="text/css" media="screen">
 			#status {
@@ -156,7 +156,25 @@
 		</style>
 	</head>
 	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+	<!--Script to load the JavaScript SDK to use FB login-->
+	<div id="fb-root"></div>
+	<!--Facebook Login Button -->
+	<div>
+		<a href="#" id="loginFB" class="buttons">Iniciar Sesión con Facebook</a>
+	</div>
+	<!--Script to load the JavaScript SDK to use FB login-->
+	<script>
+		// Load the SDK asynchronously
+		(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=219219088445493";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
 			<h1>Barra lateral</h1>
 			<ul>
