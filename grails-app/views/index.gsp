@@ -1,248 +1,143 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8" name="layout" content="main"/>
 		<title>MatchFood</title>
-		<style type="text/css" media="screen">
-			#status {
-				background-color: #eee;
-				border: .2em solid #fff;
-				margin: 2em 2em 1em;
-				padding: 1em;
-				width: 12em;
-				float: left;
-				-moz-box-shadow: 0px 0px 1.25em #ccc;
-				-webkit-box-shadow: 0px 0px 1.25em #ccc;
-				box-shadow: 0px 0px 1.25em #ccc;
-				-moz-border-radius: 0.6em;
-				-webkit-border-radius: 0.6em;
-				border-radius: 0.6em;
-			}
-
-			.ie6 #status {
-				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
-			}
-
-			#status ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
-
-			#status li {
-				line-height: 1.3;
-			}
-
-			#status h1 {
-				text-transform: uppercase;
-				font-size: 1.1em;
-				margin: 0 0 0.3em;
-			}
-
-			#page-body {
-				margin: 2em 1em 1.25em 18em;
-			}
-
-			h2 {
-				margin-top: 1em;
-				margin-bottom: 0.3em;
-				font-size: 1em;
-			}
-
-			p {
-				line-height: 1.5;
-				margin: 0.25em 0;
-			}
-
-			#controller-list ul {
-				list-style-position: inside;
-			}
-
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
-				margin: 0.25em 0;
-			}
-
-			@media screen and (max-width: 480px) {
-				#status {
-					display: none;
-				}
-
-				#page-body {
-					margin: 0 1em 1em;
-				}
-
-				#page-body h1 {
-					margin-top: 0;
-				}
-			}
-            #login {
-                margin: 15px 0px;
-                padding: 0px;
-                text-align: center;
-            }
-            #login .inner {
-                width: 340px;
-                padding-bottom: 6px;
-                margin: 60px auto;
-                text-align: left;
-                border: 1px solid #abb;
-                background-color: #079509;
-                -moz-box-shadow: 2px 2px 2px #eee;
-                -webkit-box-shadow: 2px 2px 2px #eee;
-                -khtml-box-shadow: 2px 2px 2px #eee;
-                box-shadow: 2px 2px 2px #eee;
-            }
-            #login .inner .fheader {
-                padding: 18px 26px 14px 26px;
-                background-color: #95071F;
-                margin: 0px 0 14px 0;
-                color: #ffffff;
-                font-size: 18px;
-                font-weight: bold;
-            }
-            #login .inner .cssform p {
-                margin: 0;
-                padding: 4px 0 3px 0;
-                padding-left: 105px;
-                margin-bottom: 20px;
-                height: 1%;
-
-            }
-            #login .inner .cssform input[type='text'] {
-                width: 120px;
-            }
-
-            #login .inner .cssform label {
-                font-weight: bold;
-                float: left;
-                text-align: right;
-                margin-left: -105px;
-                width: 110px;
-                padding-top: 3px;
-                padding-right: 10px;
-                color: #ffffff;
-            }
-
-            #login #remember_me_holder {
-                padding-left: 120px;
-            }
-
-            #login #submit {
-                margin-left: 15px;
-            }
-
-            #login #remember_me_holder label {
-                float: none;
-                margin-left: 0;
-                text-align: left;
-                width: 200px
-            }
-
-            #login .inner .login_message {
-                padding: 6px 25px 20px 25px;
-                color: FFFFFF;
-            }
-
-            #login .inner .text_ {
-                width: 120px;
-            }
-
-            #login .inner .chk {
-                height: 12px;
-            }
-		</style>
+		<asset:javascript src="jquery-2.1.3.js" />
+        <asset:javascript src="bootstrap/js/bootstrap.min.js" />
+        <asset:stylesheet src="bootstrap/css/bootstrap.min.css" />
+        <asset:stylesheet src="font-awesome-4.5.0/css/font-awesome.min.css" />
+        <asset:stylesheet src="social-buttons.css" />
+        <asset:javascript src="main.js" />
 	</head>
 	<body>
-	<!--Script to load the JavaScript SDK to use FB login-->
-	<div id="fb-root"></div>
-	<!--Facebook Login Button -->
-	<div>
-		<a href="#" id="loginFB" class="buttons">Iniciar Sesión con Facebook</a>
-	</div>
-	<!--Script to load the JavaScript SDK to use FB login-->
-	<script>
-		// Load the SDK asynchronously
-		(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=219219088445493";
-		fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="${createLink(url: '/MatchFood', action: 'index')}">Match Food</a>
+            </div>
 
-	<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="status" role="complementary">
-			<h1>Barra lateral</h1>
-			<ul>
-				<li>App version: <g:meta name="app.version"/></li>
-				<li>Grails version: <g:meta name="app.grails.version"/></li>
-				<li>Groovy version: ${GroovySystem.getVersion()}</li>
-				<li>JVM version: ${System.getProperty('java.version')}</li>
-				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
-				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
-				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
-				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
-			</ul>
-			<h1>Plugins instalados</h1>
-			<ul>
-				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-					<li>${plugin.name} - ${plugin.version}</li>
-				</g:each>
-			</ul>
-		</div>
-		<div id="page-body" role="main">
-			<h1>MatchFood</h1>j_spring_securi
-			<p>Please check in</p>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="${createLink(url: '/MatchFood', action: 'index')}">Inicio <span class="sr-only">(current)</span></a></li>
+                    <li><a href="${createLink(controller: 'prepare', action: 'index')}">Prepáralo a tu gusto</a></li>
+                    <li><a href="${createLink(controller: 'about', action: 'index')}">¿Quiénes Somos?</a></li>
+                    <li><a href="${createLink(controller: 'contact', action: 'index')}">Contáctenos</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="nav navbar-nav navbar-right">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Iniciar Sesión <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">
+                                <div style="width: 300px;">
+                                    <div class='fheader'><h3><b>Bienvenido</b></h3></div>
+                                    <form action='/MatchFood/j_spring_security_check' method='POST' id='loginForm' autocomplete='off'>
+                                        <p>
+                                            <label for='username'>Usuario</label>
+                                            <input type='text' class="form-control" name='j_username' id='username' placeholder="Usuario o Correo Electrónico" />
+                                        </p>
 
-            <div id='login'>
-                <div class='inner'>
-                    <div class='fheader'>Por favor identíficate</div>
+                                        <p>
+                                            <label for='password'>Contraseña:</label>
+                                            <input class="form-control" placeholder="Password" type="password" name='j_password' id='password'/>
+                                        </p>
 
+                                        <p id="remember_me_holder">
+                                            <input type='checkbox' class='chk' name='_spring_security_remember_me' id='remember_me' />
+                                            <label for='remember_me'>Recuérdame</label>
+                                        </p>
+                                        <div style="text-align: left; padding-bottom: 10px;">
+                                            <a class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">
+                                                <span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook
+                                            </a>
+                                            <a class="btn btn-block btn-social btn-twitter" style="text-align: left; width: 100%">
+                                                <span class="fa fa-twitter"></span>&emsp;Inicia Sesión con Twitter
+                                            </a>
+                                        </div>
+                                        <p>
+                                            <a href="register">¿No estás registrado?</a>
+                                        </p>
+                                        <p>
+                                            <input class="btn btn-primary" type='submit' id="submit" value='Iniciar Sesión'/>
+                                        </p>
+                                    </form>
+                                </div>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+	    <!--Script to load the JavaScript SDK to use FB login-->
+        <div id="fb-root"></div>
+        <!--Facebook Login Button -->
+        <div>
+            <a href="#" id="loginFB" class="buttons">Iniciar Sesión con Facebook</a>
+        </div>
+        <!--Script to load the JavaScript SDK to use FB login-->
 
-                    <form action='/MatchFood/j_spring_security_check' method='POST' id='loginForm' class='cssform' autocomplete='off'>
-                        <p>
-                            <label for='username'>Nombre de usuario:</label>
-                            <input type='text' class='text_' name='j_username' id='username'/>
-                        </p>
+        <g:javascript>
+            // Load the SDK asynchronously
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=219219088445493";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </g:javascript>
+        <div id="page-body" role="main" style="padding: 10px; width: 98%">
+            <div class="jumbotron">
+                <p><a href="http://www.google.com.co" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+            </div>
 
-                        <p>
-                            <label for='password'>Contraseña:</label>
-                            <input type='password' class='text_' name='j_password' id='password'/>
-                        </p>
-
-                        <p id="remember_me_holder">
-                            <input type='checkbox' class='chk' name='_spring_security_remember_me' id='remember_me' />
-                            <label for='remember_me'>Recuérdame</label>
-                        </p>
-
-                        <p>
-                            <input type='submit' id="submit" value='Identifícate'/>
-                        </p>
-                    </form>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Sándwich de Carne</h2>
+                    <p>
+                        Carne desmechada, queso amarillo, lechuga, tomate, pimentón, apio, mostaza, salsa BBQ, pasta de
+                        tomate, cebolla roja y salsa Match Food
+                    </p>
+                    <p><a class="btn btn-default" href="http://www.google.com.co">Learn more &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Vegetariano</h2>
+                    <p>
+                        Estragón, lechuga romana, tomate, cebolla, champiñones, zanahoria, apio, pimentón, maíz, salsa teriyaki,
+                        queso amarillo y salsa Match Food Reload
+                    </p>
+                    <p><a class="btn btn-default" href="http://www.google.com.co">Learn more &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Mexicano</h2>
+                    <p>
+                        Carne desmechada, chile, queso mozzarella, tomate, guacamole, cilantro, lechuga, nachos, cebolla roja,
+                        y salsa Match Food Hot
+                    </p>
+                    <p><a class="btn btn-default" href="http://www.google.com.co">Learn more &raquo;</a></p>
                 </div>
             </div>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
-			</div>
+
+            <div id="controller-list" role="navigation">
+                <h2>Controladores:</h2>
+                <ul>
+                    <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+                        <li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+                    </g:each>
+                </ul>
+            </div>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <g:form controller="logout">
                 <g:submitButton name="logout" value="Logout" />
             </g:form>
-
         </div>
 	</body>
 </html>

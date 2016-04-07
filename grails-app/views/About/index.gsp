@@ -1,3 +1,9 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: dabaq
+  Date: 7/04/2016
+  Time: 6:16 AM
+--%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
@@ -8,9 +14,8 @@
     <asset:stylesheet src="font-awesome-4.5.0/css/font-awesome.min.css" />
     <asset:stylesheet src="social-buttons.css" />
     <asset:javascript src="main.js" />
-    <title>MatchFood - Registro</title>
+    <title>Match Food - Nosotros</title>
 </head>
-
 <body>
     <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -76,24 +81,5 @@
         </div>
     </div>
 </nav>
-<p>Cree su usuario</p>
-
-<form class="form-horizontal" role="form" controller="/MatchFood/RegisterController" action="crearUsuario" method="post" enctype="multipart/form-data">
-    <p>
-        <label for='username'>Nombre de usuario:</label>
-        <input type='text' class='text_' name='usernameR' id='register_user_name'/>
-    </p>
-
-    <p>
-        <label for='password'>Contraseña:</label>
-        <input type='password' class='text_' name='passwordR' id='register_password'/>
-    </p>
-
-    <p>
-        <input type='submit' id="btn_register" value='Registrarse'/>
-    </p>
-</form>
-
 </body>
 </html>
-
