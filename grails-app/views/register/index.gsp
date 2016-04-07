@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
 <p>Cree su usuario</p>
 
 <form class="form-horizontal" role="form" controller="/MatchFood/RegisterController" action="crearUsuario" method="post" enctype="multipart/form-data">
