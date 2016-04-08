@@ -62,7 +62,7 @@
                                         </a>
                                     </div>
                                     <p>
-                                        <a href="register">¿No estás registrado?</a>
+                                        <a href="${createLink(controller: 'register', action: 'index')}">¿No estás registrado?</a>
                                     </p>
                                     <p>
                                         <input class="btn btn-primary" type='submit' id="submit" value='Iniciar Sesión'/>
@@ -76,9 +76,10 @@
         </div>
     </div>
 </nav>
-<p>Cree su usuario</p>
 
-<form class="form-horizontal" role="form" controller="/MatchFood/RegisterController" action="crearUsuario" method="post" enctype="multipart/form-data">
+
+
+<!--form class="form-horizontal" role="form" controller="/MatchFood/RegisterController" action="crearUsuario" method="post" enctype="multipart/form-data">
     <p>
         <label for='username'>Nombre de usuario:</label>
         <input type='text' class='text_' name='usernameR' id='register_user_name'/>
@@ -92,7 +93,48 @@
     <p>
         <input type='submit' id="btn_register" value='Registrarse'/>
     </p>
+</form-->
+
+<div class="col-lg-5" style="padding: 20px;">
+    <h2>Match Food</h2>
+    <p>Haz parte de nuestra comunidad y no te pierdas las mejores ofertas</p>
+<form class="form-horizontal" style="padding-top: 20px;">
+    <fieldset>
+        <div class="form-group">
+            <label for="username" class="col-lg-2 control-label">Nombre</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="usernameR" placeholder="Nombre" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Correo Electrónico</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="inputEmail" placeholder="Correo Electrónico" type="email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-lg-2 control-label">Contraseña</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="inputPassword" placeholder="Contraseña" type="password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-lg-2 control-label">Confirmar Contraseña</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="inputPasswordConfirm" placeholder="Ingrese su contraseña nuevamente" type="password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </fieldset>
 </form>
+</div>
+
+
 
 </body>
 </html>

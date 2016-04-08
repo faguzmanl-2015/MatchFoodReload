@@ -17,7 +17,7 @@ def crearUsuario(){
     if(!user.authorities.contains(userRole) ){
         UserRole.create(user, userRole,true)
         user.save(true)
-        render(view:"views/index")
+        render(view:"index")
     }
 }
 }
