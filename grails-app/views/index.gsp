@@ -10,6 +10,17 @@
         <asset:javascript src="main.js" />
 	</head>
 	<body>
+        <!--Script to load the JavaScript SDK to use FB login-->
+        <g:javascript>
+            // Load the SDK asynchronously
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=219219088445493";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </g:javascript>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -52,8 +63,9 @@
                                                 <input type='checkbox' class='chk' name='_spring_security_remember_me' id='remember_me' />
                                                 <label for='remember_me'>Recuérdame</label>
                                             </p>
+                                            <div id="fb-root"></div>
                                             <div style="text-align: left; padding-bottom: 10px;">
-                                                <a class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">
+                                                <a id="loginFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">
                                                     <span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook
                                                 </a>
                                                 <a class="btn btn-block btn-social btn-twitter" style="text-align: left; width: 100%">
@@ -75,15 +87,6 @@
                 </div>
             </div>
         </nav>
-
-	    <!--Script to load the JavaScript SDK to use FB login-->
-        <div id="fb-root"></div>
-        <!--Facebook Login Button -->
-        <div>
-            <a href="#" id="loginFB" class="buttons">Iniciar Sesión con Facebook</a>
-        </div>
-        <!--Script to load the JavaScript SDK to use FB login-->
-
         <g:javascript>
             var rol = "usuario";
             visibilidad(rol);
@@ -94,16 +97,7 @@
                     document.getElementById("administar").style.visibility = "visible";
             }
         </g:javascript>
-        <g:javascript>
-            // Load the SDK asynchronously
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=219219088445493";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </g:javascript>
+
         <div id="page-body" role="main" style="padding: 10px; width: 98%">
             <div class="jumbotron">
                 <p><a href="http://www.google.com.co" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>

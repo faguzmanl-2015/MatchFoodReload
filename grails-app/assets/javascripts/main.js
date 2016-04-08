@@ -4,11 +4,15 @@
 $(function() {
     var app_id = '219219088445493';
     var scopes = 'public_profile,email, user_friends';
-    var btn_login = "<a href='#' id='loginFB' class='buttons'>Iniciar Sesión con Facebook</a>";
+    var btn_login = '<a id="loginFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
+                    '<span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook'+
+                    '</a>;'
     var div_session = "<div id = 'facebook-session'>"+
                         "<strong></strong>"+
                         "<img>"+
-                        "<a href='#' id='logoutFB' class='buttons'>Cerrar sesion</a>"+
+                        '<a id="logoutFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
+                        '<span class="fa fa-facebook"></span>&emsp;Cerrar sesión'+
+                        '<br>'+
                         "<\div>";
 
     window.fbAsyncInit = function() {
