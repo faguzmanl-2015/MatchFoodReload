@@ -67,7 +67,7 @@
                                         </a>
                                     </div>
                                     <p>
-                                        <a href="register">¿No estás registrado?</a>
+                                        <a href="${createLink(controller: 'register', action: 'index')}">¿No estás registrado?</a>
                                     </p>
                                     <p>
                                         <input class="btn btn-primary" type='submit' id="submit" value='Iniciar Sesión'/>
