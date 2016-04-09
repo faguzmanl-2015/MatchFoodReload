@@ -6,7 +6,7 @@ $(function() {
     var scopes = 'public_profile,email, user_friends';
     var btn_login = '<a id="loginFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
                     '<span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook'+
-                    '</a>;'
+                    '</a>';
     var div_session = "<div id = 'facebook-session'>"+
                         "<strong></strong>"+
                         "<img>"+
