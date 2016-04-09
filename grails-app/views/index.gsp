@@ -8,6 +8,43 @@
         <asset:stylesheet src="font-awesome-4.5.0/css/font-awesome.min.css" />
         <asset:stylesheet src="social-buttons.css" />
         <asset:javascript src="main.js" />
+
+        <style type="text/css" media="screen">
+            div.stars {
+                width: 220px;
+                display: inline-block;
+            }
+
+            input.star { display: none; }
+
+            label.star {
+                float: right;
+                padding: 10px;
+                font-size: 25px;
+                color: #444;
+                transition: all .2s;
+            }
+
+            input.star:checked ~ label.star:before {
+                content: '\f005';
+                color: #FD4;
+                transition: all .25s;
+            }
+
+            input.star-5:checked ~ label.star:before {
+                color: #FE7;
+                text-shadow: 0 0 20px #952;
+            }
+
+            input.star-1:checked ~ label.star:before { color: #F62; }
+
+            label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+            label.star:before {
+                content: '\f006';
+                font-family: FontAwesome;
+            }
+        </style>
 	</head>
 	<body>
         <!--Script to load the JavaScript SDK to use FB login-->
@@ -110,7 +147,20 @@
                         Carne desmechada, queso amarillo, lechuga, tomate, pimentón, apio, mostaza, salsa BBQ, pasta de
                         tomate, cebolla roja y salsa Match Food
                     </p>
-                    <p><a class="btn btn-default" href="http://www.google.com.co">Learn more &raquo;</a></p>
+                    <div class="stars">
+                        <form action="">
+                            <input class="star star-5" id="star-5-carne" type="radio" name="star"/>
+                            <label class="star star-5" for="star-5-carne"></label>
+                            <input class="star star-4" id="star-4-carne" type="radio" name="star"/>
+                            <label class="star star-4" for="star-4-carne"></label>
+                            <input class="star star-3" id="star-3-carne" type="radio" name="star"/>
+                            <label class="star star-3" for="star-3-carne"></label>
+                            <input class="star star-2" id="star-2-carne" type="radio" name="star"/>
+                            <label class="star star-2" for="star-2-carne"></label>
+                            <input class="star star-1" id="star-1-carne" type="radio" name="star"/>
+                            <label class="star star-1" for="star-1-carne"></label>
+                        </form>
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <h2>Vegetariano</h2>
@@ -118,7 +168,20 @@
                         Estragón, lechuga romana, tomate, cebolla, champiñones, zanahoria, apio, pimentón, maíz, salsa teriyaki,
                         queso amarillo y salsa Match Food Reload
                     </p>
-                    <p><a class="btn btn-default" href="http://www.google.com.co">Learn more &raquo;</a></p>
+                    <div class="stars">
+                        <form action="">
+                            <input class="star star-5" id="star-5-vege" type="radio" name="star"/>
+                            <label class="star star-5" for="star-5-vege"></label>
+                            <input class="star star-4" id="star-4-vege" type="radio" name="star"/>
+                            <label class="star star-4" for="star-4-vege"></label>
+                            <input class="star star-3" id="star-3-vege" type="radio" name="star"/>
+                            <label class="star star-3" for="star-3-vege"></label>
+                            <input class="star star-2" id="star-2-vege" type="radio" name="star"/>
+                            <label class="star star-2" for="star-2-vege"></label>
+                            <input class="star star-1" id="star-1-vege" type="radio" name="star"/>
+                            <label class="star star-1" for="star-1-vege"></label>
+                        </form>
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <h2>Mexicano</h2>
@@ -126,7 +189,20 @@
                         Carne desmechada, chile, queso mozzarella, tomate, guacamole, cilantro, lechuga, nachos, cebolla roja,
                         y salsa Match Food Hot
                     </p>
-                    <p><a class="btn btn-default" href="http://www.google.com.co">Learn more &raquo;</a></p>
+                    <div class="stars">
+                        <form action="">
+                            <input class="star star-5" id="star-5-mexi" type="radio" name="star"/>
+                            <label class="star star-5" for="star-5-mexi"></label>
+                            <input class="star star-4" id="star-4-mexi" type="radio" name="star"/>
+                            <label class="star star-4" for="star-4-mexi"></label>
+                            <input class="star star-3" id="star-3-mexi" type="radio" name="star"/>
+                            <label class="star star-3" for="star-3-mexi"></label>
+                            <input class="star star-2" id="star-2-mexi" type="radio" name="star"/>
+                            <label class="star star-2" for="star-2-mexi"></label>
+                            <input class="star star-1" id="star-1-mexi" type="radio" name="star"/>
+                            <label class="star star-1" for="star-1-mexi"></label>
+                        </form>
+                    </div>
                 </div>
             </div>
 
