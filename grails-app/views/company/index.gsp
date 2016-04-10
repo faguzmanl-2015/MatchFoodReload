@@ -33,7 +33,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="${createLink(url: '/MatchFood', action: 'index')}">Inicio <span class="sr-only">(current)</span></a></li>
                 <li><a href="${createLink(controller: 'prepare', action: 'index')}">Prepáralo a tu gusto</a></li>
-                <li><a href="${createLink(controller: 'About', action: 'index')}">¿Quiénes Somos?</a></li>
+                <li><a href="${createLink(controller: 'company', action: 'index')}">¿Quiénes Somos?</a></li>
                 <li><a href="${createLink(controller: 'contact', action: 'index')}">Contáctenos</a></li>
                 <li><a id="administar" href="${createLink(controller: 'administrar', action: 'index')}">Administrar</a></li>
             </ul>
