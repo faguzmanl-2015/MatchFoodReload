@@ -28,7 +28,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="${createLink(url: '/', action: 'index')}">Inicio</a></li>
                 <li><a href="${createLink(controller: 'prepare', action: 'index')}">Prepáralo a tu gusto</a></li>
-                <li><a href="${createLink(controller: 'about', action: 'index')}">¿Quiénes Somos?</a></li>
+                <li><a href="${createLink(controller: 'company', action: 'index')}">¿Quiénes Somos?</a></li>
                 <li><a href="${createLink(controller: 'contact', action: 'index')}">Contáctenos</a></li>
                 <!--li><a id="administar" href="${createLink(controller: 'administrar', action: 'index')}">Administrar</a></li-->
             </ul>

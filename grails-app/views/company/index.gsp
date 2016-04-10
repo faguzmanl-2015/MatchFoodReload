@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: dabaq
   Date: 7/04/2016
-  Time: 6:29 AM
+  Time: 6:16 AM
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
@@ -14,11 +14,10 @@
     <asset:stylesheet src="font-awesome-4.5.0/css/font-awesome.min.css" />
     <asset:stylesheet src="social-buttons.css" />
     <asset:javascript src="main.js" />
-    <title>Match Food - Prepáralo tu mismo</title>
+    <title>Match Food - Nosotros</title>
 </head>
-
 <body>
-    <nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -27,16 +26,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="${createLink(url: '/', action: 'index')}">Match Food</a>
+            <a class="navbar-brand" href="${createLink(url: '/MatchFood', action: 'index')}">Match Food</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="${createLink(url: '/', action: 'index')}">Inicio</a></li>
-                <li><a href="${createLink(controller: 'prepare', action: 'index')}">Prepáralo a tu gusto<span class="sr-only">(current)</span></a></li>
-                <li><a href="${createLink(controller: 'company', action: 'index')}">¿Quiénes Somos?</a></li>
+                <li><a href="${createLink(url: '/MatchFood', action: 'index')}">Inicio <span class="sr-only">(current)</span></a></li>
+                <li><a href="${createLink(controller: 'prepare', action: 'index')}">Prepáralo a tu gusto</a></li>
+                <li><a href="${createLink(controller: 'About', action: 'index')}">¿Quiénes Somos?</a></li>
                 <li><a href="${createLink(controller: 'contact', action: 'index')}">Contáctenos</a></li>
-                <!--li><a id="administar" href="${createLink(controller: 'administrar', action: 'index')}">Administrar</a></li-->
+                <li><a id="administar" href="${createLink(controller: 'administrar', action: 'index')}">Administrar</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -84,5 +83,59 @@
         </div>
     </div>
 </nav>
+<div class="container">
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Nosotros:
+                    <strong>¿QUIÉNES SOMOS?</strong>
+                </h2>
+                <hr>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive img-border-left" src="https://b.zmtcdn.com/data/pictures/chains/3/5700013/b38a51822daf30a54249a05b26a9831c.png" alt="">
+            </div>
+            <div class="col-md-6">
+                <p>Somos una compañía interesada en la satisfacción del cliente, donde presentamos productos personalizados acompañados con un servicio de calidad.</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Compromisos
+                    <strong>MatchFood</strong>
+                </h2>
+                <hr>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                <h3>Compromiso de Calidad
+                    <small>Productos seguros, muy bien elaborados y recientes</small>
+                </h3>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                <h3>Compromiso en nuestros servicios
+                    <small>Agilidad y responsabilidad en cada uno de nuestros servicios</small>
+                </h3>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                <h3>Compromiso con el cliente
+                    <small>Adaptamos nuestros productos y servicios para conformidad del cliente</small>
+                </h3>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container -->
 </body>
 </html>
