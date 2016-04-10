@@ -10,16 +10,16 @@ class RegisterController {
 }
 
 def crearUsuario(){
+        def userRole = Role.findOrSaveWhere(authority: 'ROLE_USER')
+        def user = User.findOrSaveWhere(username: params.usernameR, password: params.passwordR)
 
-    def userRole = Role.findOrSaveWhere(authority: 'ROLE_USER')
-    def user = User.findOrSaveWhere(username: params.usernameR, password: params.passwordR)
-
-    if(!user.authorities.contains(userRole) ){
-        UserRole.create(user, userRole,true)
-        user.save(true)
-        render(view:"index")
+        if(!user.authorities.contains(userRole) ){
+            UserRole.create(user, userRole,true)
+            user.save(true)
+            render(view:"index")
+            render("Usuario registrado satisfactoriamente")
+        }
     }
-}
 }
 
 /*def parameters =[email:params.email,username:params.username,firstName:params.firstname,lastName:params.lastname

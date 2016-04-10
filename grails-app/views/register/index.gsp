@@ -30,6 +30,7 @@
                 <li><a href="${createLink(controller: 'prepare', action: 'index')}">Prepáralo a tu gusto</a></li>
                 <li><a href="${createLink(controller: 'about', action: 'index')}">¿Quiénes Somos?</a></li>
                 <li><a href="${createLink(controller: 'contact', action: 'index')}">Contáctenos</a></li>
+                <li><a id="administar" href="${createLink(controller: 'administrar', action: 'index')}">Administrar</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -53,8 +54,9 @@
                                         <input type='checkbox' class='chk' name='_spring_security_remember_me' id='remember_me' />
                                         <label for='remember_me'>Recuérdame</label>
                                     </p>
+                                    <div id="fb-root"></div>
                                     <div style="text-align: left; padding-bottom: 10px;">
-                                        <a class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">
+                                        <a id="loginFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">
                                             <span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook
                                         </a>
                                         <a class="btn btn-block btn-social btn-twitter" style="text-align: left; width: 100%">
@@ -77,8 +79,6 @@
     </div>
 </nav>
 
-
-
 <!--form class="form-horizontal" role="form" controller="/MatchFood/RegisterController" action="crearUsuario" method="post" enctype="multipart/form-data">
     <p>
         <label for='username'>Nombre de usuario:</label>
@@ -98,44 +98,42 @@
 <div class="col-lg-5" style="padding: 20px;">
     <h2>Match Food</h2>
     <p>Haz parte de nuestra comunidad y no te pierdas las mejores ofertas</p>
-<form class="form-horizontal" style="padding-top: 20px;">
+<form class="form-horizontal" style="padding-top: 20px;" role="form" controller="/MatchFood/RegisterController" action="crearUsuario" method="post" enctype="multipart/form-data">
     <fieldset>
         <div class="form-group">
-            <label for="username" class="col-lg-2 control-label">Nombre</label>
+            <label for="register_user_name" class="col-lg-2 control-label">Nombre</label>
             <div class="col-lg-10">
-                <input class="form-control" id="usernameR" placeholder="Nombre" type="text">
+                <input class="form-control" placeholder="Nombre" type="text" name='usernameR' id='register_user_name' />
             </div>
         </div>
-        <div class="form-group">
+        <!--div class="form-group">
             <label for="inputEmail" class="col-lg-2 control-label">Correo Electrónico</label>
             <div class="col-lg-10">
                 <input class="form-control" id="inputEmail" placeholder="Correo Electrónico" type="email">
             </div>
-        </div>
+        </div-->
         <div class="form-group">
-            <label for="inputPassword" class="col-lg-2 control-label">Contraseña</label>
+            <label for="register_password" class="col-lg-2 control-label">Contraseña</label>
             <div class="col-lg-10">
-                <input class="form-control" id="inputPassword" placeholder="Contraseña" type="password">
+                <input class="form-control" placeholder="Contraseña" type="password" name='passwordR' id='register_password' />
             </div>
         </div>
-        <div class="form-group">
+        <!--div class="form-group">
             <label for="inputPassword" class="col-lg-2 control-label">Confirmar Contraseña</label>
             <div class="col-lg-10">
                 <input class="form-control" id="inputPasswordConfirm" placeholder="Ingrese su contraseña nuevamente" type="password">
             </div>
-        </div>
+        </div-->
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
-                <button type="reset" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" id="btn_cancel_register" class="btn btn-default">Cancelar</button>
+                <input type='submit' id="btn_register" class="btn btn-primary" value='Registrarse'/>
+                <!--button type="submit" id="btn_register" class="btn btn-primary">Registrarse</button-->
             </div>
         </div>
     </fieldset>
 </form>
 </div>
-
-
-
 </body>
 </html>
 
