@@ -17,15 +17,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="${createLink(url: '/MatchFood', action: 'index')}">Match Food</a>
+                <a class="navbar-brand" href="${createLink(url: '/', action: 'index')}">Match Food</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="${createLink(url: '/MatchFood', action: 'index')}">Inicio <span class="sr-only">(current)</span></a></li>
+                    <li><a href="${createLink(url: '/', action: 'index')}">Inicio <span class="sr-only">(current)</span></a></li>
                     <li><a href="${createLink(controller: 'prepare', action: 'index')}">Prepáralo a tu gusto</a></li>
                     <li><a href="${createLink(controller: 'about', action: 'index')}">¿Quiénes Somos?</a></li>
                     <li><a href="${createLink(controller: 'contact', action: 'index')}">Contáctenos</a></li>
+                    <li><a id="administar" href="${createLink(controller: 'administrar', action: 'index')}">Administrar</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -49,8 +50,9 @@
                                             <input type='checkbox' class='chk' name='_spring_security_remember_me' id='remember_me' />
                                             <label for='remember_me'>Recuérdame</label>
                                         </p>
+                                        <div id="fb-root"></div>
                                         <div style="text-align: left; padding-bottom: 10px;">
-                                            <a class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">
+                                            <a id="loginFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">
                                                 <span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook
                                             </a>
                                             <a class="btn btn-block btn-social btn-twitter" style="text-align: left; width: 100%">

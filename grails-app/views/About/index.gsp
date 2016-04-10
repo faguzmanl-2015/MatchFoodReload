@@ -17,7 +17,7 @@
     <title>Match Food - Nosotros</title>
 </head>
 <body>
-    <nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -35,6 +35,7 @@
                 <li><a href="${createLink(controller: 'prepare', action: 'index')}">Prepáralo a tu gusto</a></li>
                 <li><a href="${createLink(controller: 'about', action: 'index')}">¿Quiénes Somos?</a></li>
                 <li><a href="${createLink(controller: 'contact', action: 'index')}">Contáctenos</a></li>
+                <li><a id="administar" href="${createLink(controller: 'administrar', action: 'index')}">Administrar</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -58,8 +59,9 @@
                                         <input type='checkbox' class='chk' name='_spring_security_remember_me' id='remember_me' />
                                         <label for='remember_me'>Recuérdame</label>
                                     </p>
+                                    <div id="fb-root"></div>
                                     <div style="text-align: left; padding-bottom: 10px;">
-                                        <a class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">
+                                        <a id="loginFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">
                                             <span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook
                                         </a>
                                         <a class="btn btn-block btn-social btn-twitter" style="text-align: left; width: 100%">
@@ -81,5 +83,59 @@
         </div>
     </div>
 </nav>
+<div class="container">
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Nosotros:
+                    <strong>¿QUIÉNES SOMOS?</strong>
+                </h2>
+                <hr>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive img-border-left" src="https://b.zmtcdn.com/data/pictures/chains/3/5700013/b38a51822daf30a54249a05b26a9831c.png" alt="">
+            </div>
+            <div class="col-md-6">
+                <p>Somos una compañía interesada en la satisfacción del cliente, donde presentamos productos personalizados acompañados con un servicio de calidad.</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Compromisos
+                    <strong>MatchFood</strong>
+                </h2>
+                <hr>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                <h3>Compromiso de Calidad
+                    <small>Productos seguros, muy bien elaborados y recientes</small>
+                </h3>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                <h3>Compromiso en nuestros servicios
+                    <small>Agilidad y responsabilidad en cada uno de nuestros servicios</small>
+                </h3>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                <h3>Compromiso con el cliente
+                    <small>Adaptamos nuestros productos y servicios para conformidad del cliente</small>
+                </h3>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container -->
 </body>
 </html>

@@ -13,7 +13,7 @@ $(function() {
                         '<a id="logoutFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
                         '<span class="fa fa-facebook"></span>&emsp;Cerrar sesión'+
                         '<br>'+
-                        "<\div>";
+                        "</div>";
 
     window.fbAsyncInit = function() {
         FB.init({

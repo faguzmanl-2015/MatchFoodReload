@@ -33,7 +33,7 @@
 
             input.star-5:checked ~ label.star:before {
                 color: #FE7;
-                text-shadow: 0 0 20px #952;
+                text-shadow: 0 0 5px #FE7;
             }
 
             input.star-1:checked ~ label.star:before { color: #F62; }
@@ -47,17 +47,11 @@
         </style>
 	</head>
 	<body>
+        <div id="usuario-Facebook">
+
+        </div>
         <!--Script to load the JavaScript SDK to use FB login-->
-        <g:javascript>
-            // Load the SDK asynchronously
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=219219088445493";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </g:javascript>
+
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -67,16 +61,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="${createLink(url: '/MatchFood', action: 'index')}">Match Food</a>
+                    <a class="navbar-brand" href="${createLink(url: '/', action: 'index')}">Match Food</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="${createLink(url: '/MatchFood', action: 'index')}">Inicio <span class="sr-only">(current)</span></a></li>
+                        <li><a href="${createLink(url: '/', action: 'index')}">Inicio <span class="sr-only">(current)</span></a></li>
                         <li><a href="${createLink(controller: 'prepare', action: 'index')}">Prepáralo a tu gusto</a></li>
                         <li><a href="${createLink(controller: 'about', action: 'index')}">¿Quiénes Somos?</a></li>
                         <li><a href="${createLink(controller: 'contact', action: 'index')}">Contáctenos</a></li>
-                        <li><a id="administar" href="${createLink(controller: 'administrar', action: 'index')}">Administrar</a></li>
+                        <!--li><a id="administar" href="${createLink(controller: 'administrar', action: 'index')}">Administrar</a></li-->
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -124,32 +118,22 @@
                 </div>
             </div>
         </nav>
-        <g:javascript>
-            var rol = "usuario";
-            visibilidad(rol);
-            function visibilidad(rol) {
-                if (rol == "usuario")
-                    document.getElementById("administar").style.visibility = "hidden";
-                else
-                    document.getElementById("administar").style.visibility = "visible";
-            }
-        </g:javascript>
 
         <div id="page-body" role="main" style="padding: 10px; width: 98%">
             <div class="jumbotron">
-                <p><a href="http://www.google.com.co" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+                <p></p><p></p><p></p><p></p>
             </div>
 
             <div class="row">
                 <div class="col-md-4">
-                    <h2>Sándwich de Carne</h2>
+                    <h2>Carne de Res</h2>
                     <p>
                         Carne desmechada, queso amarillo, lechuga, tomate, pimentón, apio, mostaza, salsa BBQ, pasta de
                         tomate, cebolla roja y salsa Match Food
                     </p>
                     <div class="stars">
                         <form action="">
-                            <input class="star star-5" id="star-5-carne" type="radio" name="star"/>
+                            <input class="star star-5" id="star-5-carne" type="radio" name="star" checked="checked"/>
                             <label class="star star-5" for="star-5-carne"></label>
                             <input class="star star-4" id="star-4-carne" type="radio" name="star"/>
                             <label class="star star-4" for="star-4-carne"></label>
@@ -172,7 +156,7 @@
                         <form action="">
                             <input class="star star-5" id="star-5-vege" type="radio" name="star"/>
                             <label class="star star-5" for="star-5-vege"></label>
-                            <input class="star star-4" id="star-4-vege" type="radio" name="star"/>
+                            <input class="star star-4" id="star-4-vege" type="radio" name="star" checked="checked"/>
                             <label class="star star-4" for="star-4-vege"></label>
                             <input class="star star-3" id="star-3-vege" type="radio" name="star"/>
                             <label class="star star-3" for="star-3-vege"></label>
@@ -193,7 +177,7 @@
                         <form action="">
                             <input class="star star-5" id="star-5-mexi" type="radio" name="star"/>
                             <label class="star star-5" for="star-5-mexi"></label>
-                            <input class="star star-4" id="star-4-mexi" type="radio" name="star"/>
+                            <input class="star star-4" id="star-4-mexi" type="radio" name="star" checked="checked"/>
                             <label class="star star-4" for="star-4-mexi"></label>
                             <input class="star star-3" id="star-3-mexi" type="radio" name="star"/>
                             <label class="star star-3" for="star-3-mexi"></label>
@@ -220,5 +204,25 @@
                 <g:submitButton name="logout" value="Logout" />
             </g:form>
         </div>
+    <g:javascript>
+        // Load the SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=219219088445493";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </g:javascript>
+    <g:javascript>
+        var rol = "usuario";
+        visibilidad(rol);
+        function visibilidad(rol) {
+            if (rol == "usuario")
+                document.getElementById("administar").style.visibility = "hidden";
+            else
+                document.getElementById("administar").style.visibility = "visible";
+        }
+    </g:javascript>
 	</body>
 </html>
