@@ -5343,3 +5343,10 @@ n:11560:org/codehaus/groovy/grails/validation/GrailsDomainClassValidator
 n:286:org/codehaus/groovy/grails/validation/CascadingValidator
 n:3432:org/codehaus/groovy/grails/plugins/DomainClassGrailsPlugin$_closure3$_closure32$_closure36
 n:429:grails/web/RequestParameter
+n:1887:org/codehaus/groovy/grails/cli/interactive/InteractiveMode$getCurrent
+n:3103:jline/console/history/MemoryHistory$EntriesIterator
+n:1117:jline/console/history/MemoryHistory$EntryImpl
+n:264:jline/console/history/History$Entry
+y:13909:org/grails/datastore/mapping/reflect/ClassPropertyFetcher
+y:7471:org/codehaus/groovy/grails/commons/GrailsMetaClassUtils
+y:6199:org/springframework/util/MethodInvoker
