@@ -192,7 +192,7 @@
                 </div>
             </div>
 
-            <div id="controller-list" role="navigation">
+            <!--<div id="controller-list" role="navigation">
                 <h2>Controladores:</h2>
                 <ul>
                     <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
@@ -200,11 +200,12 @@
                     </g:each>
                 </ul>
             </div>
+
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <g:form controller="logout">
                 <g:submitButton name="logout" value="Logout" />
-            </g:form>
+            </g:form>-->
         </div>
     <g:javascript>
         // Load the SDK asynchronously
@@ -228,3 +229,4 @@
     </g:javascript>
 	</body>
 </html>
+
