@@ -2,6 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
+    <link rel="shortcut icon" href="${createLinkTo(dir:'images',file:'logoMatchFoodSmall.png')}" type="image/x-icon">
     <asset:javascript src="jquery-2.1.3.js" />
     <asset:javascript src="bootstrap/js/bootstrap.min.js" />
     <asset:stylesheet src="bootstrap/css/bootstrap.min.js" />

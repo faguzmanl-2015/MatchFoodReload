@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
+    <link rel="shortcut icon" href="${createLinkTo(dir:'images',file:'logoMatchFoodSmall.png')}" type="image/x-icon">
     <asset:javascript src="jquery-2.1.3.js" />
     <asset:javascript src="bootstrap/js/bootstrap.min.js" />
     <asset:stylesheet src="bootstrap/css/bootstrap.min.js" />
@@ -114,19 +115,19 @@
                 <hr>
             </div>
             <div class="col-sm-4 text-center">
-                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                <div class=""><img src="${createLinkTo(dir:'images',file:'quality.jpg')}" style="padding-top: 10px" height="230" width="280"/></div>
                 <h3>Compromiso de Calidad
                     <small>Productos seguros, muy bien elaborados y recientes</small>
                 </h3>
             </div>
             <div class="col-sm-4 text-center">
-                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                <div class=""><img src="${createLinkTo(dir:'images',file:'calidad.jpg')}"  height="" width="100%"/></div>
                 <h3>Compromiso en nuestros servicios
                     <small>Agilidad y responsabilidad en cada uno de nuestros servicios</small>
                 </h3>
             </div>
             <div class="col-sm-4 text-center">
-                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                <div class=""><img src="${createLinkTo(dir:'images',file:'personal.jpg')}"  height="215" width=""/></div>
                 <h3>Compromiso con el cliente
                     <small>Adaptamos nuestros productos y servicios para conformidad del cliente</small>
                 </h3>
