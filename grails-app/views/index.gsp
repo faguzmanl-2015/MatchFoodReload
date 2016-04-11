@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>MatchFood</title>
+        <asset:link rel="shortcut icon" href="images/logoMatchFood.png" />
 		<asset:javascript src="jquery-2.1.3.js" />
         <asset:javascript src="bootstrap/js/bootstrap.min.js" />
         <asset:stylesheet src="bootstrap/css/bootstrap.min.css" />
@@ -61,7 +62,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="${createLink(url: '/', action: 'index')}">Match Food</a>
+                    <a class="navbar-brand" href="${createLink(url: '/', action: 'index')}"><img style="margin-top: 6px" src="${createLinkTo(dir:'images',file:'letrasMatchFood.png')}" alt="Matchfood" width="100"/></a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -119,14 +120,13 @@
             </div>
         </nav>
 
-        <div id="page-body" role="main" style="padding: 10px; width: 98%">
-            <div class="jumbotron">
-                <p></p><p></p><p></p><p></p>
-            </div>
+        <div id="page-body" role="main" style="padding: 10px; width: 100%">
+            <div class="mainImg"><img  style ="max-width: 100%; height: 100%;" src="${createLinkTo(dir:'images',file:'comparteInicio.png')}" alt="Princ"/></div>
 
             <div class="row">
                 <div class="col-md-4">
                     <h2>Carne de Res</h2>
+                    <div class="imgCarne"><img src="${createLinkTo(dir:'images',file:'carneDesmechada.png')}" alt="CarneDes" height="200" width="300"/></div>
                     <p>
                         Carne desmechada, queso amarillo, lechuga, tomate, pimentón, apio, mostaza, salsa BBQ, pasta de
                         tomate, cebolla roja y salsa Match Food
@@ -148,6 +148,7 @@
                 </div>
                 <div class="col-md-4">
                     <h2>Vegetariano</h2>
+                    <div class="imgCarne"><img src="${createLinkTo(dir:'images',file:'vegetariano.png')}" alt="Veg" height="200" width="300"/></div>
                     <p>
                         Estragón, lechuga romana, tomate, cebolla, champiñones, zanahoria, apio, pimentón, maíz, salsa teriyaki,
                         queso amarillo y salsa Match Food Reload
@@ -169,6 +170,7 @@
                 </div>
                 <div class="col-md-4">
                     <h2>Mexicano</h2>
+                    <div class="imgCarne"><img src="${createLinkTo(dir:'images',file:'Mexicano.png')}" alt="Mex" height="200" width="300"/></div>
                     <p>
                         Carne desmechada, chile, queso mozzarella, tomate, guacamole, cilantro, lechuga, nachos, cebolla roja,
                         y salsa Match Food Hot
