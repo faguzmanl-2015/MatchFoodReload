@@ -11,13 +11,19 @@ class RegisterController {
 
 def crearUsuario(){
         def userRole = Role.findOrSaveWhere(authority: 'ROLE_USER')
-        def user = User.findOrSaveWhere(username: params.usernameR, password: params.passwordR)
+        def user = User.findOrSaveWhere(name: params.nameR, email: params.emailR, address: params.addressR, phone: params.phoneR, username: params.usernameR, password: params.passwordR)
 
-        if(!user.authorities.contains(userRole) ){
-            UserRole.create(user, userRole,true)
-            user.save(true)
-            render(view:"index")
-            render("Usuario registrado satisfactoriamente")
+        try
+        {
+            if(!user.authorities.contains(userRole) ){
+                UserRole.create(user, userRole,true)
+                user.save(true)
+                render(view:"index")
+            }
+        }
+        catch (Exception e)
+        {
+
         }
     }
 }

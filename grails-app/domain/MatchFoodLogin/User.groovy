@@ -10,7 +10,11 @@ class User implements Serializable {
 	private static final long serialVersionUID = 1
 
 	transient springSecurityService
-
+//	String document
+	String name
+	String email
+	String address
+	String phone
 	String username
 	String password
 	boolean enabled = true
@@ -18,8 +22,12 @@ class User implements Serializable {
 	boolean accountLocked
 	boolean passwordExpired
 
-	User(String username, String password) {
+	User(String name, String email, String address, String phone, String username, String password) {
 		this()
+		this.name = name
+		this.email = email
+		this.address = address
+		this.phone = phone
 		this.username = username
 		this.password = password
 	}
@@ -45,6 +53,10 @@ class User implements Serializable {
 	static transients = ['springSecurityService']
 
 	static constraints = {
+        name blank: false
+        email blank: false, unique: true
+        address blank: false
+        phone blank: false
 		username blank: false, unique: true
 		password blank: false
 	}
