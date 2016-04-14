@@ -14,6 +14,7 @@ $(function() {
                         '<span class="fa fa-facebook"></span>&emsp;Cerrar sesión'+
                         '<br>'+
                         "</div>";
+    var dropNav = $('#dropdownNav');
 
     window.fbAsyncInit = function() {
         FB.init({
@@ -52,8 +53,8 @@ $(function() {
 
     var getFacebookData = function(){
         FB.api('/me', function(response) {
-            $('#loginFB').after(div_session);
-            $('#loginFB').remove();
+            $('#dropdownNav').after(div_session);
+            disappear();
             $('#facebook-session strong').text("Bienvenido: "+response.name);
             $('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=small');
         })
@@ -74,8 +75,8 @@ $(function() {
         FB.getLoginStatus(function(response) {
             if (response.status === 'connected') {
                 FB.logout(function(response) {
-                    $('#facebook-session').before(btn_login);
                     $('#facebook-session').remove();
+                    appear();
                 })
             }
         });
@@ -94,5 +95,15 @@ $(function() {
         else
             return false;
     })
+    function disappear ()
+    {
+        document.getElementById("dropdownNav").style.visibility = "hidden";
+        document.getElementById("dropdown-menuNav").style.visibility = "hidden";
+    }
+    function appear ()
+    {
+        document.getElementById("dropdownNav").style.visibility = "visible";
+        document.getElementById("dropdown-menuNav").style.visibility = "visible";
+    }
 
 })

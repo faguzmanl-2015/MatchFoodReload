@@ -34,9 +34,10 @@
                 <!--li><a id="administar" href="${createLink(controller: 'administrar', action: 'index')}">Administrar</a></li-->
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <div id="fb-root"></div>
                 <li class="dropdown">
                     <a class="nav navbar-nav navbar-right">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Iniciar Sesión <span class="caret"></span></a>
+                        <a href="#" id="dropdownLogin" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" >Iniciar Sesión <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">
                             <div style="width: 300px;">
                                 <div class='fheader'><h3><b>Bienvenido</b></h3></div>
@@ -55,7 +56,6 @@
                                         <input type='checkbox' class='chk' name='_spring_security_remember_me' id='remember_me' />
                                         <label for='remember_me'>Recuérdame</label>
                                     </p>
-                                    <div id="fb-root"></div>
                                     <div style="text-align: left; padding-bottom: 10px;">
                                         <a id="loginFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">
                                             <span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook
