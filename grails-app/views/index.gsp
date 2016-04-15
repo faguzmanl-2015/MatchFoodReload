@@ -1,124 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>MatchFood</title>
-        <link rel="shortcut icon" href="${createLinkTo(dir:'images',file:'logoMatchFoodSmall.png')}" type="image/x-icon">
-		<asset:javascript src="jquery-2.1.3.js" />
-        <asset:javascript src="bootstrap/js/bootstrap.min.js" />
-        <asset:stylesheet src="bootstrap/css/bootstrap.min.css" />
-        <asset:stylesheet src="font-awesome-4.5.0/css/font-awesome.min.css" />
-        <asset:stylesheet src="social-buttons.css" />
-        <asset:javascript src="main.js" />
-
-        <style type="text/css" media="screen">
-            div.stars {
-                width: 220px;
-                display: inline-block;
-            }
-
-            input.star { display: none; }
-
-            label.star {
-                float: right;
-                padding: 10px;
-                font-size: 25px;
-                color: #444;
-                transition: all .2s;
-            }
-
-            input.star:checked ~ label.star:before {
-                content: '\f005';
-                color: #FD4;
-                transition: all .25s;
-            }
-
-            input.star-5:checked ~ label.star:before {
-                color: #FE7;
-                text-shadow: 0 0 5px #FE7;
-            }
-
-            input.star-1:checked ~ label.star:before { color: #F62; }
-
-            label.star:hover { transform: rotate(-15deg) scale(1.3); }
-
-            label.star:before {
-                content: '\f006';
-                font-family: FontAwesome;
-            }
-        </style>
+        <meta name="layout" content="main">
 	</head>
 	<body>
         <div id="usuario-Facebook">
-
         </div>
         <!--Script to load the JavaScript SDK to use FB login-->
-
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="${createLink(url: '/', action: 'index')}"><img style="margin-top: 6px" src="${createLinkTo(dir:'images',file:'letrasMatchFood.png')}" alt="Matchfood" width="100"/></a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="${createLink(url: '/', action: 'index')}">Inicio <span class="sr-only">(current)</span></a></li>
-                        <li><a href="${createLink(controller: 'prepare', action: 'index')}">Prepáralo a tu gusto</a></li>
-                        <li><a href="${createLink(controller: 'company', action: 'index')}">¿Quiénes Somos?</a></li>
-                        <li><a href="${createLink(controller: 'contact', action: 'index')}">Contáctenos</a></li>
-                        <!--li><a id="administar" href="${createLink(controller: 'administrar', action: 'index')}">Administrar</a></li-->
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a class="nav navbar-nav navbar-right">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Iniciar Sesión <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">
-                                    <div style="width: 300px;">
-                                        <div class='fheader'><h3><b>Bienvenido</b></h3></div>
-                                        <form action='/MatchFood/j_spring_security_check' method='POST' id='loginForm' autocomplete='off'>
-                                            <p>
-                                                <label for='username'>Usuario</label>
-                                                <input type='text' class="form-control" name='j_username' id='username' placeholder="Usuario o Correo Electrónico" />
-                                            </p>
-
-                                            <p>
-                                                <label for='password'>Contraseña:</label>
-                                                <input class="form-control" placeholder="Password" type="password" name='j_password' id='password'/>
-                                            </p>
-
-                                            <p id="remember_me_holder">
-                                                <input type='checkbox' class='chk' name='_spring_security_remember_me' id='remember_me' />
-                                                <label for='remember_me'>Recuérdame</label>
-                                            </p>
-                                            <div id="fb-root"></div>
-                                            <div style="text-align: left; padding-bottom: 10px;">
-                                                <a id="loginFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">
-                                                    <span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook
-                                                </a>
-                                                <a class="btn btn-block btn-social btn-twitter" style="text-align: left; width: 100%">
-                                                    <span class="fa fa-twitter"></span>&emsp;Inicia Sesión con Twitter
-                                                </a>
-                                            </div>
-                                            <p>
-                                                <a href="${createLink(controller: 'register', action: 'index')}">¿No estás registrado?</a>
-                                            </p>
-                                            <p>
-                                                <input class="btn btn-primary" type='submit' id="submit" value='Iniciar Sesión'/>
-                                            </p>
-                                        </form>
-                                    </div>
-                                </ul>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
         <div id="page-body" role="main" style="padding: 10px; width: 100%">
             <div class="mainImg"><img  style ="max-width: 100%; height: 100%;" src="${createLinkTo(dir:'images',file:'comparteInicio.png')}" alt="Princ"/></div>
@@ -191,42 +79,10 @@
                     </div>
                 </div>
             </div>
-
-            <!--<div id="controller-list" role="navigation">
-                <h2>Controladores:</h2>
-                <ul>
-                    <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-                        <li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-                    </g:each>
-                </ul>
-            </div>
-
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
             <g:form controller="logout">
-                <g:submitButton name="logout" value="Logout" />
-            </g:form>-->
+                <g:submitButton name="logout" value="Salir" />
+            </g:form>
         </div>
-    <g:javascript>
-        // Load the SDK asynchronously
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=219219088445493";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </g:javascript>
-    <g:javascript>
-        var rol = "usuario";
-        visibilidad(rol);
-        function visibilidad(rol) {
-            if (rol == "usuario")
-                document.getElementById("administar").style.visibility = "hidden";
-            else
-                document.getElementById("administar").style.visibility = "visible";
-        }
-    </g:javascript>
 	</body>
 </html>
 
