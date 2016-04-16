@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/grails-app/assets/javascripts/main.js" line="77" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/grails-app/assets/javascripts/main.js" line="84" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="483d0c30-4e00-4857-bd2a-42730d35d326" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.asscache" afterPath="$PROJECT_DIR$/.asscache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/assets/javascripts/main.js" afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/administrar/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/administrar/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/company/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/company/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/contact/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/contact/index.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/prepare/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/prepare/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/register/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/register/index.gsp" />
     </list>
     <ignored path="MatchFood.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +34,7 @@
       <file leaf-file-name="index.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/register/index.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.489796">
+            <state vertical-scroll-proportion="0.0">
               <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
               <folding>
                 <marker date="1460526723936" expanded="true" signature="8425:8489" placeholder="{...}" />
@@ -64,11 +57,11 @@
       <file leaf-file-name="index.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.038462">
-              <caret line="208" column="14" selection-start-line="208" selection-start-column="14" selection-end-line="208" selection-end-column="14" />
+            <state vertical-scroll-proportion="-12.384615">
+              <caret line="72" column="91" selection-start-line="72" selection-start-column="91" selection-end-line="72" selection-end-column="91" />
               <folding>
-                <marker date="1460609770814" expanded="true" signature="12365:12680" placeholder="{...}" />
-                <marker date="1460609770814" expanded="true" signature="12849:13078" placeholder="{...}" />
+                <marker date="1460785115648" expanded="true" signature="12382:12697" placeholder="{...}" />
+                <marker date="1460785115648" expanded="true" signature="12866:13095" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -77,12 +70,21 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19865772">
-              <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.5073826">
+              <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
               <folding>
-                <marker date="1460611217597" expanded="true" signature="238:267" placeholder="..." />
-                <marker date="1460611217597" expanded="true" signature="443:799" placeholder="..." />
-                <marker date="1460611217597" expanded="true" signature="620:649" placeholder="..." />
+                <marker date="1460785115664" expanded="true" signature="238:267" placeholder="..." />
+                <marker date="1460785115664" expanded="true" signature="442:1519" placeholder="..." />
+                <marker date="1460785115664" expanded="true" signature="442:1549" placeholder="..." />
+                <marker date="1460785115664" expanded="true" signature="442:1551" placeholder="..." />
+                <marker date="1460785115664" expanded="true" signature="445:1483" placeholder="..." />
+                <marker date="1460785115664" expanded="true" signature="445:1515" placeholder="..." />
+                <marker date="1460785115664" expanded="true" signature="749:830" placeholder="..." />
+                <marker date="1460785115664" expanded="true" signature="831:1483" placeholder="..." />
+                <marker date="1460785115664" expanded="true" signature="874:1004" placeholder="..." />
+                <marker date="1460785115664" expanded="true" signature="1057:1096" placeholder="..." />
+                <marker date="1460785115664" expanded="true" signature="1212:1241" placeholder="..." />
+                <marker date="1460785115664" expanded="true" signature="1242:1483" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -174,7 +176,10 @@
       </map>
     </option>
     <option name="PUSH_TAGS">
-      <GitPushTagMode />
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
     </option>
   </component>
   <component name="GradleLocalSettings">
@@ -260,7 +265,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1932" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -307,6 +313,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -359,9 +366,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -872,7 +878,8 @@
       <workItem from="1460419612382" duration="133000" />
       <workItem from="1460512188993" duration="659000" />
       <workItem from="1460514832574" duration="9673000" />
-      <workItem from="1460600068959" duration="9051000" />
+      <workItem from="1460600068959" duration="9363000" />
+      <workItem from="1460779724912" duration="5431000" />
     </task>
     <task id="LOCAL-00001" summary="Login con Facebook">
       <created>1459833969824</created>
@@ -946,14 +953,20 @@
       <option name="project" value="LOCAL" />
       <updated>1460512763996</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Se modifica el botón de login con facebook para que quede más elegante y cubra el campo de incio de sesión">
+      <created>1460611380889</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1460611380889</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138702000" />
+    <option name="totallyTimeSpent" value="144445000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -969,7 +982,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20302714" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20260416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1034,8 +1047,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="78" column="83" selection-start-line="78" selection-start-column="83" selection-end-line="78" selection-end-column="83" />
           <folding>
-            <marker date="1460609770814" expanded="true" signature="12365:12680" placeholder="{...}" />
-            <marker date="1460609770814" expanded="true" signature="12849:13078" placeholder="{...}" />
+            <marker date="1460785115648" expanded="true" signature="12382:12697" placeholder="{...}" />
+            <marker date="1460785115648" expanded="true" signature="12866:13095" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1045,9 +1058,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1460611217597" expanded="true" signature="238:267" placeholder="..." />
-            <marker date="1460611217597" expanded="true" signature="443:799" placeholder="..." />
-            <marker date="1460611217597" expanded="true" signature="620:649" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="238:267" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="442:1519" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="442:1549" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="442:1551" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="445:1483" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="445:1515" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="749:830" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="831:1483" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="874:1004" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="1057:1096" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="1212:1241" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="1242:1483" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1107,7 +1129,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1140,7 +1161,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1308,7 +1328,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/register/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding>
+            <marker date="1460526723936" expanded="true" signature="8425:8489" placeholder="{...}" />
+            <marker date="1460526723936" expanded="true" signature="8555:8586" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3328859">
+          <caret line="973" column="0" selection-start-line="973" selection-start-column="0" selection-end-line="973" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1332,12 +1369,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/contact/index.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/administrar/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="160" column="6" selection-start-line="160" selection-start-column="6" selection-end-line="160" selection-end-column="6" />
+          <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
           <folding>
-            <marker date="1460518927751" expanded="true" signature="9057:9372" placeholder="{...}" />
+            <marker date="1460518927816" expanded="true" signature="4935:5164" placeholder="{...}" />
+            <marker date="1460518927816" expanded="true" signature="5271:5586" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1352,33 +1390,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/administrar/index.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/contact/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
+          <caret line="160" column="6" selection-start-line="160" selection-start-column="6" selection-end-line="160" selection-end-column="6" />
           <folding>
-            <marker date="1460518927816" expanded="true" signature="4935:5164" placeholder="{...}" />
-            <marker date="1460518927816" expanded="true" signature="5271:5586" placeholder="{...}" />
+            <marker date="1460518927751" expanded="true" signature="9057:9372" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/register/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.489796">
-          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
-          <folding>
-            <marker date="1460526723936" expanded="true" signature="8425:8489" placeholder="{...}" />
-            <marker date="1460526723936" expanded="true" signature="8555:8586" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3328859">
-          <caret line="973" column="0" selection-start-line="973" selection-start-column="0" selection-end-line="973" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1392,23 +1410,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.038462">
-          <caret line="208" column="14" selection-start-line="208" selection-start-column="14" selection-end-line="208" selection-end-column="14" />
+        <state vertical-scroll-proportion="-12.384615">
+          <caret line="72" column="91" selection-start-line="72" selection-start-column="91" selection-end-line="72" selection-end-column="91" />
           <folding>
-            <marker date="1460609770814" expanded="true" signature="12365:12680" placeholder="{...}" />
-            <marker date="1460609770814" expanded="true" signature="12849:13078" placeholder="{...}" />
+            <marker date="1460785115648" expanded="true" signature="12382:12697" placeholder="{...}" />
+            <marker date="1460785115648" expanded="true" signature="12866:13095" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19865772">
-          <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.5073826">
+          <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
           <folding>
-            <marker date="1460611217597" expanded="true" signature="238:267" placeholder="..." />
-            <marker date="1460611217597" expanded="true" signature="443:799" placeholder="..." />
-            <marker date="1460611217597" expanded="true" signature="620:649" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="238:267" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="442:1519" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="442:1549" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="442:1551" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="445:1483" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="445:1515" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="749:830" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="831:1483" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="874:1004" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="1057:1096" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="1212:1241" placeholder="..." />
+            <marker date="1460785115664" expanded="true" signature="1242:1483" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -7,13 +7,20 @@ $(function() {
     var btn_login = '<a id="loginFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
                     '<span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook'+
                     '</a>';
-    var div_session = "<div id = 'facebook-session'>"+
-                        "<strong></strong>"+
-                        "<img>"+
-                        '<a id="logoutFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
-                        '<span class="fa fa-facebook"></span>&emsp;Cerrar sesión'+
-                        '<br>'+
-                        "</div>";
+    var div_session = "<li id = 'facebook-session'>"+
+                            '<a href="#" class="dropdown-toggle" id="dropFacebookLoginNav" data-toggle="dropdown" role="button" aria-expanded="false"><img> <span class="caret"></span></a>'+
+                                '<ul class="dropdown-menu" id="dropdown-menuFacebookLoginNav" role="menu" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">'+
+                                    '<p>'+
+                                        '<div id="textName"><strong></strong></div>'+
+                                    '</p>'+
+                                    '<div style="text-align: left; padding-bottom: 10px;">'+
+                                        '<a id="logoutFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
+                                            '<span class="fa fa-facebook"></span>&emsp;Cerrar sesión'+
+                                        '</a>'+
+                                    '</div>'+
+                                '</ul>'+
+                            '</a>'+
+                        '</li>';
     var dropNav = $('#dropdownNav');
 
     window.fbAsyncInit = function() {
@@ -53,10 +60,10 @@ $(function() {
 
     var getFacebookData = function(){
         FB.api('/me', function(response) {
-            $('#dropdownNav').after(div_session);
+            $('#generalList').append(div_session);
             disappear();
-            $('#facebook-session strong').text("Bienvenido: "+response.name);
-            $('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=small');
+            $('#textName strong').text("Bienvenido: "+response.name);
+            $('#dropFacebookLoginNav img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=small');
         })
     }
 
