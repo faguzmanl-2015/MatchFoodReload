@@ -79,6 +79,7 @@
                     </div>
                 </div>
             </div>
+            <a href="${createLink(controller: 'register', action: 'showLoggedUser')}">Nombre de Usuario</a>
             <g:form controller="logout">
                 <g:submitButton name="logout" value="Salir" />
             </g:form>
