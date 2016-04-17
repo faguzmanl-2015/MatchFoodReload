@@ -74,7 +74,7 @@
                         <!--li><a id="administar" href="${createLink(controller: 'administrar', action: 'index')}">Administrar</a></li-->
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
+                        <li class="dropdown" id="dropdownList">
                             <a class="nav navbar-nav navbar-right" id = "navbarRight">
                                 <a href="#" class="dropdown-toggle" id="dropdownNav" data-toggle="dropdown" role="button" aria-expanded="false">Iniciar Sesión <span class="caret"></span></a>
                                 <ul class="dropdown-menu" id="dropdown-menuNav" role="menu" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">
