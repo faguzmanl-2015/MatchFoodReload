@@ -39,10 +39,10 @@
                         <!--li><a id="administar" href="${createLink(controller: 'administrar', action: 'index')}">Administrar</a></li-->
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a class="nav navbar-nav navbar-right">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Iniciar Sesión <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">
+                        <li class="dropdown" id="dropdownList" >
+                            <a class="nav navbar-nav navbar-right" id="navbarRight">
+                                <a href="#" id="dropdownNav" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Iniciar Sesión <span class="caret"></span></a>
+                                <ul class="dropdown-menu" id="dropdown-menuNav" role="menu" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">
                                     <div style="width: 300px;">
                                         <div class='fheader'><h3><b>Bienvenido</b></h3></div>
                                         <form action='/MatchFood/j_spring_security_check' method='POST' id='loginForm' autocomplete='off'>
