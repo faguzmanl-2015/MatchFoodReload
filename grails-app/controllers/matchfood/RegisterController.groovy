@@ -18,7 +18,7 @@ def crearUsuario(){
             if(!user.authorities.contains(userRole) ){
                 UserRole.create(user, userRole,true)
                 user.save(true)
-                render(view:"index")
+                redirect(uri:'/')
             }
         }
         catch (Exception e)
