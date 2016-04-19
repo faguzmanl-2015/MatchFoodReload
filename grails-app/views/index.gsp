@@ -9,8 +9,30 @@
         <!--Script to load the JavaScript SDK to use FB login-->
 
         <div id="page-body" role="main" style="padding: 10px; width: 100%">
-            <div class="mainImg"><img  style ="max-width: 100%; height: 100%;" src="${createLinkTo(dir:'images',file:'comparteInicio.png')}" alt="Princ"/></div>
+            <!--div class="mainImg"><img  style ="max-width: 100%; height: 100%;" src="${createLinkTo(dir:'images',file:'comparteInicio.png')}" alt="Princ"/></div-->
 
+            <div id="myCarousel" class="carousel slide span4 offset4">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active item1"></li>
+                    <li data-target="#myCarousel" data-slide-to="1" class="item2"></li>
+                    <li data-target="#myCarousel" data-slide-to="2" class="item3"></li>
+                </ol>
+                <div class="carousel-inner" id="carrusel">
+                    <div class="item active">
+                        <div class="item-content"align="center"><img  style ="max-width: 100%; max-height: 50%;  " src="${createLinkTo(dir:'images',file:'comparteInicio.png')}" height="740" /></div>
+                    </div>
+                    <div class="item">
+                        <div class="item-content" align="center"  ><img  style ="max-width: 100%; max-height: 50%;" src="${createLinkTo(dir:'images',file:'armarInicio.png')}" height="740"/></div>
+                    </div>
+                    <div class="item">
+                        <div class="item-content" align="center"><img  style ="max-width: 100%; max-height: 50%;" src="${createLinkTo(dir:'images',file:'procesoInicio.png')}" height="740"/></div>
+                    </div>
+
+                </div>
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+            </div>
             <div class="row">
                 <div class="col-md-4">
                     <h2>Carne de Res</h2>
@@ -84,6 +106,31 @@
                 <g:submitButton name="logout" value="Salir" />
             </g:form>
         </div>
+        <g:javascript>
+            $(document).ready(function(){
+                // Activate Carousel
+                $("#myCarousel").carousel({interval: 5000});
+
+                // Enable Carousel Indicators
+                $(".item1").click(function(){
+                    $("#myCarousel").carousel(0);
+                });
+                $(".item2").click(function(){
+                    $("#myCarousel").carousel(1);
+                });
+                $(".item3").click(function(){
+                    $("#myCarousel").carousel(2);
+                });
+
+                // Enable Carousel Controls
+                $(".left").click(function(){
+                    $("#myCarousel").carousel("prev");
+                });
+                $(".right").click(function(){
+                    $("#myCarousel").carousel("next");
+                });
+            });
+        </g:javascript>
 	</body>
 </html>
 

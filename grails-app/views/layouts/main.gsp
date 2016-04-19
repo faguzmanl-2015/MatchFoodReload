@@ -82,5 +82,10 @@
             </div>
         </nav>
 		<g:layoutBody/>
+        <div class="col-sm-12" style="padding: 20px;">
+            <h5 style="text-align: center" class="footer-copyright">
+                Todos los derechos reservados © Match Food - 2016
+            </h5>
+        </div>
 	</body>
 </html>

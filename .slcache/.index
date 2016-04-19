@@ -5350,3 +5350,4 @@ n:264:jline/console/history/History$Entry
 y:13909:org/grails/datastore/mapping/reflect/ClassPropertyFetcher
 y:7471:org/codehaus/groovy/grails/commons/GrailsMetaClassUtils
 y:6199:org/springframework/util/MethodInvoker
+n:289:org/codehaus/groovy/classgen/asm/OptimizingStatementWriter$1
