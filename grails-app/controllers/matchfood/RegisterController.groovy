@@ -33,10 +33,10 @@ def crearUsuario(){
         try{
             String username=springSecurityService.authentication.getName()
             if(username=="__grails.anonymous.user__"){
-                render("no one logged on");
+                return "no one logged on"
             }
             else{
-                render(username)
+                return username
             }
         }
         catch(Exception e){
