@@ -18,6 +18,7 @@ def crearUsuario(){
             if(!user.authorities.contains(userRole) ){
                 UserRole.create(user, userRole,true)
                 user.save(true)
+                springSecurityService.reauthenticate(params.usernameR, params.passwordR)
                 redirect(uri:'/')
             }
         }
@@ -44,18 +45,3 @@ def crearUsuario(){
     }
 }
 
-/*def parameters =[email:params.email,username:params.username,firstName:params.firstname,lastName:params.lastname
-                 ,gender:params.gender,passwordHash:shiroSecurityService.encodePassword(params.password),active:false,avatar:f.getBytes()
-                 ,userCity:params.state,userCountry:params.country]
-user= new User(parameters)
-mailService.sendMail {
-    to "${user.email}"
-    subject "Confirmar email"
-    html    g.render(template:'/email/registrationConfirmation', model:[user:user,password:params.password])
-}
-if(user.save(flush: true)){
-    user.addToRoles(Role.findByName("ROLE_USER"))
-    user.addToPermissions("*:*")
-
-    redirect(controller:'index', action:'viewHome')
-}*/
