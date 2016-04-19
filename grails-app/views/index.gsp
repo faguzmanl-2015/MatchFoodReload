@@ -102,9 +102,6 @@
                     </div>
                 </div>
             </div>
-            <g:form controller="logout">
-                <g:submitButton name="logout" value="Salir" />
-            </g:form>
         </div>
         <g:javascript>
             $(document).ready(function(){

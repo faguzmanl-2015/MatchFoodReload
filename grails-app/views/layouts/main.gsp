@@ -83,40 +83,22 @@
                 </sec:ifNotLoggedIn>
                 <sec:ifLoggedIn>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown" id="dropdownList" >
-                            <a class="nav navbar-nav navbar-right" id="navbarRight">
-                                <a href="#" id="dropdownNav" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Opciones <span class="caret"></span></a>
-                                <ul class="dropdown-menu" id="dropdown-menuNav" role="menu" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">
+                        <li class="dropdown" id="dropdownListLogged" >
+                            <a class="nav navbar-nav navbar-right" id="navbarRightLogged">
+                                <a href="#" id="dropdownNavLogged" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hola, <sec:loggedInUserInfo field="username" /> <span class="caret"></span></a>
+                                <ul class="dropdown-menu" id="dropdown-menuNavLogged" role="menu" style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 10px;">
                                     <div style="width: 300px;">
-                                        <div class='fheader'><h3><b>Bienvenido <sec:loggedInUserInfo field="username" /> !</b></h3></div>
-                                        <form action='/MatchFood/j_spring_security_check' method='POST' id='loginForm' autocomplete='off'>
-                                            <p>
-                                                <label for='username'>Sip estas logueado papu</label>
-                                                <input type='text' class="form-control" name='j_username' id='username' placeholder="Usuario o Correo Electrónico" />
-                                            </p>
-
-                                            <p>
-                                                <label for='password'>Contraseña:</label>
-                                                <input class="form-control" placeholder="Password" type="password" name='j_password' id='password'/>
-                                            </p>
-
-                                            <p id="remember_me_holder">
-                                                <input type='checkbox' class='chk' name='_spring_security_remember_me' id='remember_me' />
-                                                <label for='remember_me'>Recuérdame</label>
-                                            </p>
-                                            <div id="fb-root"></div>
-                                            <div style="text-align: left; padding-bottom: 10px;">
-                                                <a id="loginFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">
-                                                    <span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook
-                                                </a>
-                                            </div>
-                                            <p>
-                                                <a href="${createLink(controller: 'register', action: 'index')}">¿No estás registrado?</a>
-                                            </p>
-                                            <p>
-                                                <input class="btn btn-primary" type='submit' id="submit" value='Iniciar Sesión'/>
-                                            </p>
-                                        </form>
+                                        <div style="padding: 10px;">
+                                            <b>Bienvenido <sec:loggedInUserInfo field="username" /></b>
+                                        </div>
+                                        <div class="list-group table-of-contents">
+                                            <a class="list-group-item" href="${createLink(controller: 'profile', action: 'index')}">Perfil</a>
+                                            <a class="list-group-item" href="${createLink(controller: 'favorites', action: 'index')}">Favoritos</a>
+                                            <a class="list-group-item" href="${createLink(controller: 'orders', action: 'index')}">Mis Pedidos</a>
+                                        </div>
+                                        <g:form controller="logout">
+                                            <g:submitButton class="btn btn-primary" name="logout" value="Cerrar Sesión" />
+                                        </g:form>
                                     </div>
                                 </ul>
                             </a>
@@ -127,8 +109,8 @@
             </div>
         </nav>
 		<g:layoutBody/>
-        <div class="col-sm-12" style="padding: 20px;">
-            <h5 style="text-align: center" class="footer-copyright">
+        <div class="col-sm-12" style="padding: 20px;background-color: darkgray;">
+            <h5 style="text-align: center; color: white;" class="footer-copyright">
                 Todos los derechos reservados © Match Food - 2016
             </h5>
         </div>
