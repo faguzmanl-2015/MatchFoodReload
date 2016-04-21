@@ -12,7 +12,6 @@ class BootStrap {
             UserRole.create(user, adminRole,true)
         }
 
-
         def userRole = Role.findOrSaveWhere(authority: 'ROLE_USUARIO')
         def userNoAdmin = User.findOrSaveWhere(name: 'user', email: 'correoUser@unal.edu.co', address: 'La Nacho', phone: '3165000', username: 'user', password: '1234')
 

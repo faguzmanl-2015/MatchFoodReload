@@ -133,3 +133,13 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/MatchFood/**':['permitAll']
 ]
 
+grails {
+    mail {
+        host = "smtp.gmail.com"
+        port = 587
+        username = "matchfoodreload@gmail.com"
+        password = "matchfood12345"
+        props = ["mail.smtp.auth":"true", "mail.smtp.starttls.enable":"true"
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+#visualizer-panel .leftStuff {
+    float: left;
+}
+#visualizer-panel .rightStuff {
+    float: right;
+}
+
+#visualizer-panel .draggable:hover {
+    cursor: move;
+}
+
+/* Drag & Drop */
+#visualizer-panel .draggable {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+}
+
+input:focus {outline:0;}
+

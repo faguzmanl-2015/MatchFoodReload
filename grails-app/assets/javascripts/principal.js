@@ -28,3 +28,11 @@ function errorRegister ()
 {
     alert("Error");
 }
+
+function correctSendEmail() {
+    alert ("Hemos reicbido tu solicitud exitosamente");
+}
+
+function errorSendEmail() {
+    alert ("Oooops. ¡Algo ha ocurrido! Nuestros Ingenieros trabajarán inmediatamente para solucionarlo.");
+}

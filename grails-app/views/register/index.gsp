@@ -46,6 +46,9 @@
                     <input class="form-control" required="required" placeholder="Contraseña" type="password" name='passwordR' id='register_password' />
                 </div>
             </div>
+            <div>
+                <p>Al registrarse acepta los <a href="${createLink(controller: 'conditions', action: 'index')}">Términos y Condiciones</a> para el uso de su información por Match Food</p>
+            </div>
             <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
                     <button type="reset" id="btn_cancel_register" class="btn btn-default">Cancelar</button>
