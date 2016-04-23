@@ -5,4 +5,15 @@ import grails.plugin.springsecurity.annotation.Secured
 class OrdersController {
 
     def index() { }
+
+    def shoppingCart = {
+        getPedido {
+            action {
+
+                [ListarPedidos: MatchFoodLogin.Producto.list()]
+            }
+            on("success").to "showCatalogue"
+            on(Exception).to "handleError"
+        }
+    }
 }

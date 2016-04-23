@@ -179,250 +179,250 @@
             }
         }
 
-        var total = 4000*contadorCarnes + 2000*contadorAcompañantes;
-
+        var total = 4000*contadorCarnes + 2000*contadorAcompañantes
         var r = confirm("Proteina: " + contadorCarnes.toString() + "\nIngredientes: " + contadorAcompañantes.toString() + "\nTotal a Pagar: $ " + total);
         if (r == true) {
-            alert(" Felicidades. Vas a disfrutar del mejor Sándwich a tu gusto.");
-        } else {
+            ${remoteFunction(controller: 'prepare' , action: 'makeOrder')}
+          alert(" Felicidades. Vas a disfrutar del mejor Sándwich a tu gusto.");
+     } else {
             $('#tapaPanBaguette1').css("visibility", "hidden");
             $('#tapaPanBlanco1').css("visibility", "hidden");
             $('#tapaPanIntegral1').css("visibility", "hidden");
             $('#tapaPanQueso1').css("visibility", "hidden");
-        }
-    });
+    }
+});
 
-    $('#jamon').click(function() {
-        contadorElementos = contadorElementos + 1;
-        contadorCarnes = contadorCarnes + 1;
-        profundidad = contadorElementos + 2;
-        if( $('#jamonPlato').is("visible") ){
-            $('#jamonPlato').css("visibility", "hidden");
-        }else{
-            $('#jamonPlato').css("visibility", "visible");
-            $('#jamonPlato').css("z-index", profundidad.toString());
-        }
-    });
+$('#jamon').click(function() {
+    contadorElementos = contadorElementos + 1;
+    contadorCarnes = contadorCarnes + 1;
+    profundidad = contadorElementos + 2;
+    if( $('#jamonPlato').is("visible") ){
+        $('#jamonPlato').css("visibility", "hidden");
+    }else{
+        $('#jamonPlato').css("visibility", "visible");
+        $('#jamonPlato').css("z-index", profundidad.toString());
+    }
+});
 
-    $('#atun').click(function() {
-        contadorElementos = contadorElementos + 1;
-        contadorCarnes = contadorCarnes + 1;
-        profundidad = contadorElementos + 2;
-        if( $('#atunPlato').is("visible") ){
-            $('#atunPlato').css("visibility", "hidden");
-        }else{
-            $('#atunPlato').css("visibility", "visible");
-            $('#atunPlato').css("z-index", profundidad.toString());
-        }
-    });
+$('#atun').click(function() {
+    contadorElementos = contadorElementos + 1;
+    contadorCarnes = contadorCarnes + 1;
+    profundidad = contadorElementos + 2;
+    if( $('#atunPlato').is("visible") ){
+        $('#atunPlato').css("visibility", "hidden");
+    }else{
+        $('#atunPlato').css("visibility", "visible");
+        $('#atunPlato').css("z-index", profundidad.toString());
+    }
+});
 
-    $('#salmon').click(function() {
-        contadorElementos = contadorElementos + 1;
-        contadorCarnes = contadorCarnes + 1;
-        profundidad = contadorElementos + 2;
-        if( $('#salmonPlato').is("visible") ){
-            $('#salmonPlato').css("visibility", "hidden");
-        }else{
-            $('#salmonPlato').css("visibility", "visible");
-            $('#salmonPlato').css("z-index", profundidad.toString());
-        }
-    });
+$('#salmon').click(function() {
+    contadorElementos = contadorElementos + 1;
+    contadorCarnes = contadorCarnes + 1;
+    profundidad = contadorElementos + 2;
+    if( $('#salmonPlato').is("visible") ){
+        $('#salmonPlato').css("visibility", "hidden");
+    }else{
+        $('#salmonPlato').css("visibility", "visible");
+        $('#salmonPlato').css("z-index", profundidad.toString());
+    }
+});
 
-    $('#pollo').click(function() {
-        contadorElementos = contadorElementos + 1;
-        contadorCarnes = contadorCarnes + 1;
-        profundidad = contadorElementos + 2;
-        if( $('#polloPlato').is("visible") ){
-            $('#polloPlato').css("visibility", "hidden");
-        }else{
-            $('#polloPlato').css("visibility", "visible");
-            $('#polloPlato').css("z-index", profundidad.toString());
-        }
-    });
+$('#pollo').click(function() {
+    contadorElementos = contadorElementos + 1;
+    contadorCarnes = contadorCarnes + 1;
+    profundidad = contadorElementos + 2;
+    if( $('#polloPlato').is("visible") ){
+        $('#polloPlato').css("visibility", "hidden");
+    }else{
+        $('#polloPlato').css("visibility", "visible");
+        $('#polloPlato').css("z-index", profundidad.toString());
+    }
+});
 
-    $('#tocino').click(function() {
-        contadorElementos = contadorElementos + 1;
-        contadorCarnes = contadorCarnes + 1;
-        profundidad = contadorElementos + 2;
-        if( $('#tocinoPlato').is("visible") ){
-            $('#tocinoPlato').css("visibility", "hidden");
-        }else{
-            $('#tocinoPlato').css("visibility", "visible");
-            $('#tocinoPlato').css("z-index", profundidad.toString());
-        }
-    });
+$('#tocino').click(function() {
+    contadorElementos = contadorElementos + 1;
+    contadorCarnes = contadorCarnes + 1;
+    profundidad = contadorElementos + 2;
+    if( $('#tocinoPlato').is("visible") ){
+        $('#tocinoPlato').css("visibility", "hidden");
+    }else{
+        $('#tocinoPlato').css("visibility", "visible");
+        $('#tocinoPlato').css("z-index", profundidad.toString());
+    }
+});
 
-    $('#champinon').click(function() {
-        contadorElementos = contadorElementos + 1;
-        contadorAcompañantes = contadorAcompañantes + 1;
-        profundidad = contadorElementos + 2;
-        if( $('#champinonPlato').is("visible") ){
-            $('#champinonPlato').css("visibility", "hidden");
-        }else{
-            $('#champinonPlato').css("visibility", "visible");
-            $('#champinonPlato').css("z-index", profundidad.toString());
-        }
-    });
+$('#champinon').click(function() {
+    contadorElementos = contadorElementos + 1;
+    contadorAcompañantes = contadorAcompañantes + 1;
+    profundidad = contadorElementos + 2;
+    if( $('#champinonPlato').is("visible") ){
+        $('#champinonPlato').css("visibility", "hidden");
+    }else{
+        $('#champinonPlato').css("visibility", "visible");
+        $('#champinonPlato').css("z-index", profundidad.toString());
+    }
+});
 
-    $('#cebolla').click(function() {
-        contadorElementos = contadorElementos + 1;
-        contadorAcompañantes = contadorAcompañantes + 1;
-        profundidad = contadorElementos + 2;
-        if( $('#cebollaPlato').is("visible") ){
-            $('#cebollaPlato').css("visibility", "hidden");
-        }else{
-            $('#cebollaPlato').css("visibility", "visible");
-            $('#cebollaPlato').css("z-index", profundidad.toString());
-        }
-    });
+$('#cebolla').click(function() {
+    contadorElementos = contadorElementos + 1;
+    contadorAcompañantes = contadorAcompañantes + 1;
+    profundidad = contadorElementos + 2;
+    if( $('#cebollaPlato').is("visible") ){
+        $('#cebollaPlato').css("visibility", "hidden");
+    }else{
+        $('#cebollaPlato').css("visibility", "visible");
+        $('#cebollaPlato').css("z-index", profundidad.toString());
+    }
+});
 
-    $('#lechuga').click(function() {
-        contadorElementos = contadorElementos + 1;
-        contadorAcompañantes = contadorAcompañantes + 1;
-        profundidad = contadorElementos + 2;
-        if( $('#lechugaPlato').is("visible") ){
-            $('#lechugaPlato').css("visibility", "hidden");
-        }else{
-            $('#lechugaPlato').css("visibility", "visible");
-            $('#lechugaPlato').css("z-index", profundidad.toString());
-        }
-    });
+$('#lechuga').click(function() {
+    contadorElementos = contadorElementos + 1;
+    contadorAcompañantes = contadorAcompañantes + 1;
+    profundidad = contadorElementos + 2;
+    if( $('#lechugaPlato').is("visible") ){
+        $('#lechugaPlato').css("visibility", "hidden");
+    }else{
+        $('#lechugaPlato').css("visibility", "visible");
+        $('#lechugaPlato').css("z-index", profundidad.toString());
+    }
+});
 
-    $('#pepino').click(function() {
-        contadorElementos = contadorElementos + 1;
-        contadorAcompañantes = contadorAcompañantes + 1;
-        profundidad = contadorElementos + 2;
-        if( $('#pepinoPlato').is("visible") ){
-            $('#pepinoPlato').css("visibility", "hidden");
-        }else{
-            $('#pepinoPlato').css("visibility", "visible");
-            $('#pepinoPlato').css("z-index", profundidad.toString());
-        }
-    });
+$('#pepino').click(function() {
+    contadorElementos = contadorElementos + 1;
+    contadorAcompañantes = contadorAcompañantes + 1;
+    profundidad = contadorElementos + 2;
+    if( $('#pepinoPlato').is("visible") ){
+        $('#pepinoPlato').css("visibility", "hidden");
+    }else{
+        $('#pepinoPlato').css("visibility", "visible");
+        $('#pepinoPlato').css("z-index", profundidad.toString());
+    }
+});
 
-    $('#pimenton').click(function() {
-        contadorElementos = contadorElementos + 1;
-        contadorAcompañantes = contadorAcompañantes + 1;
-        profundidad = contadorElementos + 2;
-        if( $('#pimentonPlato').is("visible") ){
-            $('#pimentonPlato').css("visibility", "hidden");
-        }else{
-            $('#pimentonPlato').css("visibility", "visible");
-            $('#pimentonPlato').css("z-index", profundidad.toString());
-        }
-    });
+$('#pimenton').click(function() {
+    contadorElementos = contadorElementos + 1;
+    contadorAcompañantes = contadorAcompañantes + 1;
+    profundidad = contadorElementos + 2;
+    if( $('#pimentonPlato').is("visible") ){
+        $('#pimentonPlato').css("visibility", "hidden");
+    }else{
+        $('#pimentonPlato').css("visibility", "visible");
+        $('#pimentonPlato').css("z-index", profundidad.toString());
+    }
+});
 
-    $('#queso').click(function() {
-        contadorElementos = contadorElementos + 1;
-        contadorAcompañantes = contadorAcompañantes + 1;
-        profundidad = contadorElementos + 2;
-        if( $('#quesoPlato').is("visible") ){
-            $('#quesoPlato').css("visibility", "hidden");
-        }else{
-            $('#quesoPlato').css("visibility", "visible");
-            $('#quesoPlato').css("z-index", profundidad.toString());
-        }
-    });
+$('#queso').click(function() {
+    contadorElementos = contadorElementos + 1;
+    contadorAcompañantes = contadorAcompañantes + 1;
+    profundidad = contadorElementos + 2;
+    if( $('#quesoPlato').is("visible") ){
+        $('#quesoPlato').css("visibility", "hidden");
+    }else{
+        $('#quesoPlato').css("visibility", "visible");
+        $('#quesoPlato').css("z-index", profundidad.toString());
+    }
+});
 
-    $('#tomate').click(function() {
-        contadorElementos = contadorElementos + 1;
-        contadorAcompañantes = contadorAcompañantes + 1;
-        profundidad = contadorElementos + 2;
-        if( $('#tomate').is("visible") ){
-            $('#tomatePlato').css("visibility", "hidden");
-        }else{
-            $('#tomatePlato').css("visibility", "visible");
-            $('#tomatePlato').css("z-index", profundidad.toString());
-        }
-    });
+$('#tomate').click(function() {
+    contadorElementos = contadorElementos + 1;
+    contadorAcompañantes = contadorAcompañantes + 1;
+    profundidad = contadorElementos + 2;
+    if( $('#tomate').is("visible") ){
+        $('#tomatePlato').css("visibility", "hidden");
+    }else{
+        $('#tomatePlato').css("visibility", "visible");
+        $('#tomatePlato').css("z-index", profundidad.toString());
+    }
+});
 
-    $('#panBag').click(function(){
-        pan = 1;
-        $('#panBaguette1').css("visibility", "visible");
-        $('#panBlanco1').css("visibility", "hidden");
-        $('#panIntegral1').css("visibility", "hidden");
-        $('#panQueso1').css("visibility", "hidden");
+$('#panBag').click(function(){
+    pan = 1;
+    $('#panBaguette1').css("visibility", "visible");
+    $('#panBlanco1').css("visibility", "hidden");
+    $('#panIntegral1').css("visibility", "hidden");
+    $('#panQueso1').css("visibility", "hidden");
 
-    });
-    $('#panBla').click(function(){
-        pan = 2;
-        $('#panBaguette1').css("visibility", "hidden");
-        $('#panBlanco1').css("visibility", "visible");
-        $('#panIntegral1').css("visibility", "hidden");
-        $('#panQueso1').css("visibility", "hidden");
-    });
-    $('#panInt').click(function(){
-        pan = 3;
-        $('#panBaguette1').css("visibility", "hidden");
-        $('#panBlanco1').css("visibility", "hidden");
-        $('#panIntegral1').css("visibility", "visible");
-        $('#panQueso1').css("visibility", "hidden");
-    });
-    $('#panQue').click(function(){
-        pan = 4;
-        $('#panBaguette1').css("visibility", "hidden");
-        $('#panBlanco1').css("visibility", "hidden");
-        $('#panIntegral1').css("visibility", "hidden");
-        $('#panQueso1').css("visibility", "visible");
-    });
+});
+$('#panBla').click(function(){
+    pan = 2;
+    $('#panBaguette1').css("visibility", "hidden");
+    $('#panBlanco1').css("visibility", "visible");
+    $('#panIntegral1').css("visibility", "hidden");
+    $('#panQueso1').css("visibility", "hidden");
+});
+$('#panInt').click(function(){
+    pan = 3;
+    $('#panBaguette1').css("visibility", "hidden");
+    $('#panBlanco1').css("visibility", "hidden");
+    $('#panIntegral1').css("visibility", "visible");
+    $('#panQueso1').css("visibility", "hidden");
+});
+$('#panQue').click(function(){
+    pan = 4;
+    $('#panBaguette1').css("visibility", "hidden");
+    $('#panBlanco1').css("visibility", "hidden");
+    $('#panIntegral1').css("visibility", "hidden");
+    $('#panQueso1').css("visibility", "visible");
+});
 
 
-    interact('.draggable').draggable({
-        inertia: true,
-        restrict: {
-            restriction: "#visualizer-panel",
-            endOnly: true,
-            elementRect: { top: -0.8, left: -0.45, bottom: -0.2, right: 2.55 }
-        },
-        onmove: function (event) {
-            var target = event.target,
-            // keep the dragged position in the data-x/data-y attributes
-                x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
-                y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+interact('.draggable').draggable({
+    inertia: true,
+    restrict: {
+        restriction: "#visualizer-panel",
+        endOnly: true,
+        elementRect: { top: -0.8, left: -0.45, bottom: -0.2, right: 2.55 }
+    },
+    onmove: function (event) {
+        var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+            x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+            y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-            // translate the element
-            target.style.webkitTransform =
-                    target.style.transform =
-                            'translate(' + x + 'px, ' + y + 'px)';
+        // translate the element
+        target.style.webkitTransform =
+                target.style.transform =
+                        'translate(' + x + 'px, ' + y + 'px)';
 
-            // update the posiion attributes
-            target.setAttribute('data-x', x);
-            target.setAttribute('data-y', y);
-        },
-        onend: function(event) {
-            console.log(event);
-        }
-    });
+        // update the posiion attributes
+        target.setAttribute('data-x', x);
+        target.setAttribute('data-y', y);
+    },
+    onend: function(event) {
+        console.log(event);
+    }
+});
 
-    interact('.dropzone').dropzone({
-        accept: '.draggable',
-        overlap: 0.01,
+interact('.dropzone').dropzone({
+    accept: '.draggable',
+    overlap: 0.01,
 
-        // add / remove dropzone feedback
-        ondropactivate: function (event) {
-            event.target.classList.add('drop-active');
-        },
-        ondropdeactivate: function (event) {
-            event.target.classList.remove('drop-active');
-        },
+    // add / remove dropzone feedback
+    ondropactivate: function (event) {
+        event.target.classList.add('drop-active');
+    },
+    ondropdeactivate: function (event) {
+        event.target.classList.remove('drop-active');
+    },
 
-        // add / remove dropzone feedback
-        ondragenter: function (event) {
-            var draggableElement = event.relatedTarget,
-                    dropzoneElement = event.target;
-            dropzoneElement.classList.add('drop-target');
-            draggableElement.classList.add('can-drop');
-        },
-        ondragleave: function (event) {
-            event.target.classList.remove('drop-target');
-            event.relatedTarget.classList.remove('can-drop');
-        },
+    // add / remove dropzone feedback
+    ondragenter: function (event) {
+        var draggableElement = event.relatedTarget,
+                dropzoneElement = event.target;
+        dropzoneElement.classList.add('drop-target');
+        draggableElement.classList.add('can-drop');
+    },
+    ondragleave: function (event) {
+        event.target.classList.remove('drop-target');
+        event.relatedTarget.classList.remove('can-drop');
+    },
 
-        // drop successful
-        ondrop: function (event) {
-            console.log(event);
-        }
-    });
+    // drop successful
+    ondrop: function (event) {
+        console.log(event);
+    }
+});
 
 
 

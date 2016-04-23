@@ -29,6 +29,21 @@ def crearUsuario(){
 
     }
 
+    def actulizarLogin() {
+
+        try{
+            String username=springSecurityService.authentication.getName()
+            if(username=="__grails.anonymous.user__"){
+                render template="/layouts/Logged"
+            }
+            else{
+                return username
+            }
+        }
+        catch(Exception e){
+        }
+    }
+
     def showLoggedUser(){
         try{
             String username=springSecurityService.authentication.getName()
