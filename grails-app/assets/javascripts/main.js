@@ -4,6 +4,7 @@
 $(function() {
     var app_id = '219219088445493';
     var scopes = 'public_profile,email, user_friends';
+    var link = linkCreation("profile", "indexFB");
     var btn_login = '<a id="loginFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
                     '<span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook'+
                     '</a>';
@@ -13,6 +14,12 @@ $(function() {
                                 '<p>'+
                                     '<div id="textName"><strong></strong></div>'+
                                 '</p>'+
+                                '<div class="list-group table-of-contents">'+
+                                    '<a class="list-group-item" href="/profile/indexFB">Perfil</a>'+
+                                    '<a class="list-group-item" href="/favorites/index">Favoritos</a>'+
+                                    '<a class="list-group-item" href="/orders/index">Mis Pedidos</a>'+
+                                '</div>'+
+                                '<li class="divider"></li>'+
                                 '<div style="text-align: left; padding-bottom: 10px;">'+
                                     '<a id="logoutFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
                                         '<span class="fa fa-facebook"></span>&emsp;Cerrar sesión'+
