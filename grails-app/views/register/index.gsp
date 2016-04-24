@@ -19,7 +19,7 @@
             <div class="form-group">
                 <label for="register_email" class="col-lg-2 control-label">Correo Electrónico</label>
                 <div class="col-lg-10">
-                    <input class="form-control" required="required" placeholder="Correo Electrónico" type="text" name='emailR' id='register_email' />
+                    <input class="form-control" required="required" placeholder="Correo Electrónico" type="email" name='emailR' id='register_email' />
                 </div>
             </div>
             <div class="form-group">
@@ -37,7 +37,7 @@
             <div class="form-group">
                 <label for="register_phone" class="col-lg-2 control-label">Teléfono</label>
                 <div class="col-lg-10">
-                    <input class="form-control" required="required" placeholder="Teléfono de Contacto" type="text" name='phoneR' id='register_phone' />
+                    <input class="form-control" required="required" placeholder="Teléfono de Contacto" type="number" name='phoneR' id='register_phone' />
                 </div>
             </div>
             <div class="form-group">
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div>
-                <p>Al registrarse acepta los <a href="${createLink(controller: 'conditions', action: 'index')}">Términos y Condiciones</a> para el uso de su información por Match Food</p>
+                <p>Al registrarse acepta los <a href="${createLink(controller: 'conditions', action: 'index')}">Términos y Condiciones</a> de uso de Match Food</p>
             </div>
             <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">

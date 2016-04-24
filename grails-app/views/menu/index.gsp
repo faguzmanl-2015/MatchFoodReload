@@ -39,9 +39,9 @@
     <!-- Page Features -->
     <div class="row text-center">
 
-        <div class="col-md-3 col-sm-6 hero-feature">
+        <div class="col-md-4 col-sm-6 hero-feature">
             <div class="thumbnail">
-                <img src="${createLinkTo(dir:'images',file:'carneDesmechada.png')}" alt="CarneDes" height="200" width="300">
+                <img src="${createLinkTo(dir:'images',file:'carneDesmechada.png')}" alt="CarneDes">
                 <div class="caption">
                     <h3>Carne de Res</h3>
                     <p>Carne desmechada, queso amarillo, lechuga, tomate, pimentón, apio, mostaza, salsa BBQ,
@@ -53,9 +53,49 @@
             </div>
         </div>
 
-        <div class="col-md-3 col-sm-6 hero-feature">
+        <div class="col-md-4 col-sm-6 hero-feature">
             <div class="thumbnail">
-                <img src="${createLinkTo(dir:'images',file:'vegetariano.png')}" alt="Mex" height="200" width="300">
+                <img src="${createLinkTo(dir:'images',file:'corderoMenu.png')}" alt="Cor">
+                <div class="caption">
+                    <h3>Cordero</h3>
+                    <p>Jamón de cordero, frescos vegetales, queso mozzarella y salsa Match Food</p>
+                    <p>
+                        <a href="#" class="btn btn-primary">+ Añadir al Carro</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="${createLinkTo(dir:'images',file:'salmonMenu.png')}" alt="Sal">
+                <div class="caption">
+                    <h3>Salmón</h3>
+                    <p>Salmon, tomate cherry, salsa de maracuya y queso mozzarella</p>
+                    <p>
+                        <a href="#" class="btn btn-primary">+ Añadir al Carro</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="${createLinkTo(dir:'images',file:'atunMenu.png')}" alt="Atun">
+                <div class="caption">
+                    <h3>Atún</h3>
+                    <p>Lomitos de atún con salsa de la casa, frescos vegetales y queso mozzarella</p>
+                    <p>
+                        <a href="#" class="btn btn-primary">+ Añadir al Carro</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="${createLinkTo(dir:'images',file:'vegetariano.png')}" alt="Veg">
                 <div class="caption">
                     <h3>Vegetariano</h3>
                     <p>Estragón, lechuga romana, tomate, cebolla, champiñones, zanahoria, apio, pimentón,
@@ -67,9 +107,49 @@
             </div>
         </div>
 
-        <div class="col-md-3 col-sm-6 hero-feature">
+        <div class="col-md-4 col-sm-6 hero-feature">
             <div class="thumbnail">
-                <img src="${createLinkTo(dir:'images',file:'Mexicano.png')}" alt="Mex" height="200" width="300">
+                <img src="${createLinkTo(dir:'images',file:'FondueCarneMenu.png')}" alt="Fou">
+                <div class="caption">
+                    <h3>Fondue de Carne</h3>
+                    <p>Queso funido, champiñones salteados, salsa de la casa, tocineta y tomate</p>
+                    <p>
+                        <a href="#" class="btn btn-primary">+ Añadir al Carro</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="${createLinkTo(dir:'images',file:'lomoResMenu.png')}" alt="Res">
+                <div class="caption">
+                    <h3>Lomo de Res</h3>
+                    <p>Tiras de lomo de res, aritos de cebolla, tomate, pimenton, queso mozzarella y salsa Match Food Reload</p>
+                    <p>
+                        <a href="#" class="btn btn-primary">+ Añadir al Carro</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="${createLinkTo(dir:'images',file:'polloMenu.png')}" alt="Pol">
+                <div class="caption">
+                    <h3>Lomo de Res</h3>
+                    <p>Queso fundido, pechuga a la plancha, deliciosos vegetales frecos, lechuga y salsa Match Food</p>
+                    <p>
+                        <a href="#" class="btn btn-primary">+ Añadir al Carro</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="${createLinkTo(dir:'images',file:'Mexicano.png')}" alt="Mex" >
                 <div class="caption">
                     <h3>Mexicano</h3>
                     <p>Carne desmechada, chile, queso mozzarella, tomate, guacamole, cilantro,
@@ -80,64 +160,8 @@
                 </div>
             </div>
         </div>
-
-        <div class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail">
-                <img src="${createLinkTo(dir:'images',file:'Mexicano.png')}" alt="Mex" height="200" width="300">
-                <div class="caption">
-                    <h3>Repetido</h3>
-                    <p>Para los que les gusta repetir jajajaja</p>
-                    <p>
-                        <a href="#" class="btn btn-primary">+ Añadir al Carro</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
     </div>
-    <!-- /.row -->
-
-    <hr>
-
-    <!--div class="col-md-4">
-        <h2>Hawaiano</h2>
-        <div class="imgCarne"><img src="${createLinkTo(dir:'images',file:'hawaiano.png')}" alt="CarneDes"/></div>
-        <p>
-            Jamón, piña, queso mozzarella y mayonesa.
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Jamón</h2>
-        <div class="imgCarne"><img src="${createLinkTo(dir:'images',file:'jamon.png')}" alt="Veg" /></div>
-        <p>
-            Jamón, jamonada, jamón de cordero, queso mozzarella, lechuga y salsa Match Food Reload.
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Pollo</h2>
-        <div class="imgCarne"><img src="${createLinkTo(dir:'images',file:'Pollo.png')}" alt="Mex" /></div>
-        <p>
-            Pollo, tomate, queso mozzarella, lechuga y mayonesa.
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Rolo</h2>
-        <div class="imgCarne"><img src="${createLinkTo(dir:'images',file:'rolo.png')}" alt="CarneDes" /></div>
-        <p>
-            Lomo de res, queso, cebolla roja y salsa Match Food
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Italiano</h2>
-        <div class="imgCarne"><img src="${createLinkTo(dir:'images',file:'italiano.png')}" alt="CarneDes" /></div>
-        <p>
-            Carne desmechada, jamón, salami, queso mozzarella, queso parmesano, tomate, lechuga romana, albahaca, tomillo, pimienta y salsa italiana.
-        </p>
-    </div-->
-
 </div>
-<!-- /.container -->
-
 </body>
 
 </html>
