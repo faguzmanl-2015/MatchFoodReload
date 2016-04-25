@@ -5477,3 +5477,7 @@ n:2432:script14612162347961489591462$_run_closure4
 n:2648:script14612162347961489591462$_run_closure4$_closure10
 y:18772:javax/mail/Session
 n:1262:groovyjarjarantlr/NoViableAltForCharException
+n:1393:java_lang_Object$getClass$1
+n:1885:grails/util/PluginBuildSettings$getPluginDirectories
+n:1818:grails/util/BuildSettings$getBaseDir
+n:2013:grails/util/PluginBuildSettings$getPluginInfo$0

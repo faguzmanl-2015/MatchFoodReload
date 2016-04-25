@@ -4,29 +4,28 @@
 $(function() {
     var app_id = '219219088445493';
     var scopes = 'public_profile,email, user_friends';
-    var link = linkCreation("profile", "indexFB");
     var btn_login = '<a id="loginFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
-                    '<span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook'+
-                    '</a>';
+        '<span class="fa fa-facebook"></span>&emsp;Inicia Sesión con Facebook'+
+        '</a>';
     var div_session = "<ul class='nav navbar-nav navbar-right' id ='facebook-session' >"+
-                        '<li href="#" class="dropdown-toggle" id="dropFacebookLoginNav" data-toggle="dropdown" role="button" aria-expanded="false" style="padding-left: 20px; padding-right: 20px " width="40px" height="40px"><img class="img-circle"> <span class="caret"></span></li>'+
-                            '<ul class="dropdown-menu" id="dropdown-menuFacebookLoginNav" role="menu" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">'+
-                                '<p>'+
-                                    '<div id="textName"><strong></strong></div>'+
-                                '</p>'+
-                                '<div class="list-group table-of-contents">'+
-                                    '<a class="list-group-item" href="/profile/indexFB">Perfil</a>'+
-                                    '<a class="list-group-item" href="/favorites/index">Favoritos</a>'+
-                                    '<a class="list-group-item" href="/orders/index">Mis Pedidos</a>'+
-                                '</div>'+
-                                '<li class="divider"></li>'+
-                                '<div style="text-align: left; padding-bottom: 10px;">'+
-                                    '<a id="logoutFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
-                                        '<span class="fa fa-facebook"></span>&emsp;Cerrar sesión'+
-                                    '</a>'+
-                                '</div>'+
-                            '</ul>'+
-                        '</ul>';
+        '<li href="#" class="dropdown-toggle" id="dropFacebookLoginNav" data-toggle="dropdown" role="button" aria-expanded="false" style="padding-left: 20px; padding-right: 20px " width="40px" height="40px"><img class="img-circle"> <span class="caret"></span></li>'+
+        '<ul class="dropdown-menu" id="dropdown-menuFacebookLoginNav" role="menu" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">'+
+        '<p>'+
+        '<div id="textName"><strong></strong></div>'+
+        '</p>'+
+        '<div class="list-group table-of-contents">'+
+        '<a class="list-group-item" href="profileFB/index">Perfil</a>'+
+        '<a class="list-group-item" href="favorites/index">Favoritos</a>'+
+        '<a class="list-group-item" href="orders/index">Mis Pedidos</a>'+
+        '</div>'+
+        '<li class="divider"></li>'+
+        '<div style="text-align: left; padding-bottom: 10px;">'+
+        '<a id="logoutFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
+        '<span class="fa fa-facebook"></span>&emsp;Cerrar sesión'+
+        '</a>'+
+        '</div>'+
+        '</ul>'+
+        '</ul>';
 
     window.fbAsyncInit = function() {
         FB.init({
@@ -69,7 +68,24 @@ $(function() {
             $('#dropdownList').after(div_session);
             $('#textName strong').text(response.name);
             $('#dropFacebookLoginNav img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=small');
+
+            //Parte para la vista del perfil del usuario logueado con Facebook
+            $('#imgFrame img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
+            $('#nameSpace strong').text(response.name);
         })
+        FB.api(
+            '/me/friends',
+            'GET',
+            {},
+            function(response) {
+                var items = [];
+                $.each(response.data, function(i, item) {
+                    var nameToShow = item.name
+                    items.push('<li><img src="http://graph.facebook.com/'+item.id+'/picture?type=small"> </img></li>');
+                });
+                $('#friendsList').append(items.join(''));
+            }
+        );
     }
 
     var facebookLogin = function(){
@@ -117,5 +133,4 @@ $(function() {
         document.getElementById("dropdownNav").style.visibility = "visible";
         document.getElementById("dropdown-menuNav").style.visibility = "visible";
     }
-
 })

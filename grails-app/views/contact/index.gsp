@@ -35,7 +35,7 @@
                 </p>
                 <div style="display: inline">
                    <p>Síguenos en:</p>
-                    <a href="https://www.facebook.com/pages/Universidad-Nacional-de-Colombia/109253625759997" target="_blank" title="">
+                    <a href="https://www.facebook.com/matchfoodreload" target="_blank" title="">
                         <img width="10%" src="${createLinkTo(dir:'images',file:'Facebook.png')}"/>
                     </a>
                     <a href="https://twitter.com/UNColombia" target="_blank" title="">
