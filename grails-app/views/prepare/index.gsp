@@ -134,7 +134,10 @@
             <img id="tomatePlato" class="draggable" style="background-color: rgba(0,0,0,0); visibility: hidden; z-index: 3; width: 38%;left: 20px; top: 650px; position: absolute;" type="image" src="${createLinkTo(dir:'images',file:'DragAndDrop/tomatePlato.png')}" />
         </div>
         <div style="display: block">
-            <a id="btn_terminar" style="display: block; z-index: 3;left: 630px; top: 730px; position: absolute;" class="btn btn-default btn-lg">Terminar</a>
+            <form role="form" controller="/MatchFood/PrepareController" action="makeOrderPrepare" method="post">
+                <input id="totalR" name="totalR" style="visibility: hidden" value="0"/>
+                <input id="btn_terminar" value="Terminar" type="submit" style="display: block; z-index: 3;left: 630px; top: 730px; position: absolute;" class="btn btn-default btn-lg"/>
+            </form>
         </div>
     </div>
 </div>
@@ -180,10 +183,11 @@
         }
 
         var total = 4000*contadorCarnes + 2000*contadorAcompañantes
+        $("#totalR").val(total);
+
         var r = confirm("Proteina: " + contadorCarnes.toString() + "\nIngredientes: " + contadorAcompañantes.toString() + "\nTotal a Pagar: $ " + total);
         if (r == true) {
-            ${remoteFunction(controller: 'prepare' , action: 'makeOrder')}
-          alert(" Felicidades. Vas a disfrutar del mejor Sándwich a tu gusto.");
+            alert(" Felicidades. Vas a disfrutar del mejor Sándwich a tu gusto");
      } else {
             $('#tapaPanBaguette1').css("visibility", "hidden");
             $('#tapaPanBlanco1').css("visibility", "hidden");

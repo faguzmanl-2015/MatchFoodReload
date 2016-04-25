@@ -13,9 +13,11 @@ class PrepareController {
     }
 
     def makeOrderPrepare(){
-        def product = Producto.findOrSaveWhere(id_producto: 00004, precio_producto: params.total)
+        String totalString = params.totalR
+        Integer totalInteger = totalString.toInteger()
+        def product = Producto.findOrSaveWhere(id_producto: 00026, precio_producto: totalInteger)
         product.save(true)
-        render("si funciona")
+        redirect(uri: "/prepare/prueba")
     }
 
     def prueba(){
