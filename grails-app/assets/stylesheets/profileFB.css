@@ -1,0 +1,12 @@
+.pic:hover {
+    width:60px;
+}
+.imgContainer{
+    /*text-align: match-parent;
+    padding:auto;
+    margin: 0 auto;*/
+    margin-left: 40%;
+}
+.myContainer{
+    text-align: center;
+}

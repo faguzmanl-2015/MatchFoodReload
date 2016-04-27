@@ -14,19 +14,19 @@ $(function() {
         '<div id="textName"><strong></strong></div>'+
         '</p>'+
         '<div class="list-group table-of-contents">'+
-        '<a class="list-group-item" href="profileFB/index">Perfil</a>'+
-        '<a class="list-group-item" href="favorites/index">Favoritos</a>'+
-        '<a class="list-group-item" href="orders/index">Mis Pedidos</a>'+
+        '<a class="list-group-item" id="profileBtn">Perfil</a>'+ //profileFB/index
+        '<a class="list-group-item" id="favBtn">Favoritos</a>'+ //favorites/index
+        '<a class="list-group-item" id="reqBtn">Mis Pedidos</a>'+ //orders/index
         '</div>'+
         '<li class="divider"></li>'+
         '<div style="text-align: left; padding-bottom: 10px;">'+
-        '<a id="logoutFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
+        '<a href="" id="logoutFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
         '<span class="fa fa-facebook"></span>&emsp;Cerrar sesión'+
         '</a>'+
         '</div>'+
         '</ul>'+
         '</ul>';
-
+    var friends = [];
     window.fbAsyncInit = function() {
         FB.init({
             appId      : app_id,
@@ -66,6 +66,9 @@ $(function() {
         FB.api('/me', function(response) {
             disappear();
             $('#dropdownList').after(div_session);
+            document.getElementById("profileBtn").href= "${createLink(controller: 'profileFB' , action:'index')}";
+            document.getElementById("favBtn").href= "${createLink(controller: 'favorites' , action:'index')}";
+            document.getElementById("reqBtn").href= "${createLink(controller: 'orders' , action:'index')}";
             $('#textName strong').text(response.name);
             $('#dropFacebookLoginNav img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=small');
 
@@ -78,16 +81,26 @@ $(function() {
             'GET',
             {},
             function(response) {
-                var items = [];
+                var count= 0;
+                addRows();
                 $.each(response.data, function(i, item) {
-                    var nameToShow = item.name
-                    items.push('<li><img src="http://graph.facebook.com/'+item.id+'/picture?type=small"> </img></li>');
+                    var nameToShow = item.name;
+                    count++;
+                    friends.push('<img src="http://graph.facebook.com/'+item.id+'/picture?type=square" class="pic" title="'+item.name+'" > </img>');
+                    if(count%4==0){
+                        friends.push('</div>' +
+                            '</div>');
+                        addRows();
+                    }
                 });
-                $('#friendsList').append(items.join(''));
+                $('#gridContainer').append(friends.join(''));
             }
         );
     }
-
+    function addRows(){
+        friends.push('<div class="row">');
+        friends.push('<div class="col-sm-4">');
+    }
     var facebookLogin = function(){
         checkLoginState(function(response) {
             if (!response) {
@@ -123,6 +136,9 @@ $(function() {
         else
             return false;
     })
+    function createLink(id,controller,action){
+        document.getElementById(id).href = "${createLink(controller: '"+ "\'controller\'"+", action: '"+ "\'index\')}"
+    }
     function disappear ()
     {
         document.getElementById("dropdownNav").style.visibility = "hidden";
