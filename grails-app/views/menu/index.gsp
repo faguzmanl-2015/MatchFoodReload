@@ -47,7 +47,8 @@
                     <p>Carne desmechada, queso amarillo, lechuga, tomate, pimentón, apio, mostaza, salsa BBQ,
                     pasta de tomate, cebolla roja y salsa MatchFood.</p>
                     <p>
-                        <a class="btn btn-primary btn-large" href="${createLink(controller: 'menu', action: 'makeOrderT1')}">+ Añadir al Carro</a>
+                        <a class="btn btn-primary btn-large" id="btn_san_1">+ Añadir al Carro</a>
+                        <!--a class="btn btn-primary btn-large" href="${createLink(controller: 'menu', action: 'makeOrderT1')}">+ Añadir al Carro</a-->
                     </p>
                 </div>
             </div>
@@ -60,7 +61,7 @@
                     <h3>Cordero</h3>
                     <p>Jamón de cordero, frescos vegetales, queso mozzarella y salsa Match Food</p>
                     <p>
-                        <a href="#" class="btn btn-primary">+ Añadir al Carro</a>
+                        <a class="btn btn-primary btn-large" id="btn_san_2">+ Añadir al Carro</a>
                     </p>
                 </div>
             </div>
@@ -73,7 +74,7 @@
                     <h3>Salmón</h3>
                     <p>Salmon, tomate cherry, salsa de maracuya y queso mozzarella</p>
                     <p>
-                        <a href="#" class="btn btn-primary">+ Añadir al Carro</a>
+                        <a class="btn btn-primary btn-large" id="btn_san_3">+ Añadir al Carro</a>
                     </p>
                 </div>
             </div>
@@ -87,7 +88,7 @@
                     <h3>Atún</h3>
                     <p>Lomitos de atún con salsa de la casa, frescos vegetales y queso mozzarella</p>
                     <p>
-                        <a href="#" class="btn btn-primary">+ Añadir al Carro</a>
+                        <a class="btn btn-primary btn-large" id="btn_san_4">+ Añadir al Carro</a>
                     </p>
                 </div>
             </div>
@@ -101,7 +102,8 @@
                     <p>Estragón, lechuga romana, tomate, cebolla, champiñones, zanahoria, apio, pimentón,
                     maíz, salsa teriyaki, queso amarillo y salsa MatchFood.</p>
                     <p>
-                        <a class="btn btn-primary btn-large" href="${createLink(controller: 'menu', action: 'makeOrderT2')}">+ Añadir al Carro</a>
+                        <a class="btn btn-primary btn-large" id="btn_san_5">+ Añadir al Carro</a>
+                        <!--a class="btn btn-primary btn-large" href="${createLink(controller: 'menu', action: 'makeOrderT2')}">+ Añadir al Carro</a-->
                     </p>
                 </div>
             </div>
@@ -114,7 +116,7 @@
                     <h3>Fondue de Carne</h3>
                     <p>Queso funido, champiñones salteados, salsa de la casa, tocineta y tomate</p>
                     <p>
-                        <a href="#" class="btn btn-primary">+ Añadir al Carro</a>
+                        <a class="btn btn-primary btn-large" id="btn_san_6">+ Añadir al Carro</a>
                     </p>
                 </div>
             </div>
@@ -128,7 +130,7 @@
                     <h3>Lomo de Res</h3>
                     <p>Tiras de lomo de res, aritos de cebolla, tomate, pimenton, queso mozzarella y salsa Match Food Reload</p>
                     <p>
-                        <a href="#" class="btn btn-primary">+ Añadir al Carro</a>
+                        <a class="btn btn-primary btn-large" id="btn_san_7">+ Añadir al Carro</a>
                     </p>
                 </div>
             </div>
@@ -138,10 +140,10 @@
             <div class="thumbnail">
                 <img src="${createLinkTo(dir:'images',file:'polloMenu.png')}" alt="Pol">
                 <div class="caption">
-                    <h3>Lomo de Res</h3>
+                    <h3>Pollo</h3>
                     <p>Queso fundido, pechuga a la plancha, deliciosos vegetales frecos, lechuga y salsa Match Food</p>
                     <p>
-                        <a href="#" class="btn btn-primary">+ Añadir al Carro</a>
+                        <a class="btn btn-primary btn-large" id="btn_san_8">+ Añadir al Carro</a>
                     </p>
                 </div>
             </div>
@@ -155,7 +157,8 @@
                     <p>Carne desmechada, chile, queso mozzarella, tomate, guacamole, cilantro,
                     lechuga, nachos, cebolla roja, y salsa MatchFood.</p>
                     <p>
-                        <a class="btn btn-primary btn-large" href="${createLink(controller: 'menu', action: 'makeOrderT3')}">+ Añadir al Carro</a>
+                        <a class="btn btn-primary btn-large" id="btn_san_9">+ Añadir al Carro</a>
+                        <!--a class="btn btn-primary btn-large" href="${createLink(controller: 'menu', action: 'makeOrderT3')}">+ Añadir al Carro</a-->
                     </p>
                 </div>
             </div>
@@ -163,5 +166,4 @@
     </div>
 </div>
 </body>
-
 </html>

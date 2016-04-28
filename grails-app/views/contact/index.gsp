@@ -38,7 +38,7 @@
                     <a href="https://www.facebook.com/matchfoodreload" target="_blank" title="">
                         <img width="10%" src="${createLinkTo(dir:'images',file:'Facebook.png')}"/>
                     </a>
-                    <a href="https://twitter.com/UNColombia" target="_blank" title="">
+                    <a href="https://twitter.com/Match_Food" target="_blank" title="">
                         <img width="10%" src="${createLinkTo(dir:'images',file:'Twitter.png')}"/>
                     </a>
                 </div>
