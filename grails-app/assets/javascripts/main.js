@@ -2,6 +2,7 @@
  * Created by Crow on 04/04/2016.
  */
 $(function() {
+
     var app_id = '219219088445493';
     var scopes = 'public_profile,email, user_friends';
     var btn_login = '<a id="loginFB" class="btn btn-block btn-social btn-facebook" style="text-align: left; width: 100%">'+
@@ -66,9 +67,6 @@ $(function() {
         FB.api('/me', function(response) {
             disappear();
             $('#dropdownList').after(div_session);
-            document.getElementById("profileBtn").href= "${createLink(controller: 'profileFB' , action:'index')}";
-            document.getElementById("favBtn").href= "${createLink(controller: 'favorites' , action:'index')}";
-            document.getElementById("reqBtn").href= "${createLink(controller: 'orders' , action:'index')}";
             $('#textName strong').text(response.name);
             $('#dropFacebookLoginNav img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=small');
 
@@ -136,14 +134,17 @@ $(function() {
         else
             return false;
     })
+
     function createLink(id,controller,action){
         document.getElementById(id).href = "${createLink(controller: '"+ "\'controller\'"+", action: '"+ "\'index\')}"
     }
+
     function disappear ()
     {
         document.getElementById("dropdownNav").style.visibility = "hidden";
         document.getElementById("dropdown-menuNav").style.visibility = "hidden";
     }
+
     function appear ()
     {
         document.getElementById("dropdownNav").style.visibility = "visible";

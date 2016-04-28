@@ -4,5 +4,9 @@ import grails.plugin.springsecurity.annotation.Secured
 @Secured(['permitAll'])
 class ProfileFBController {
 
-    def index() {}
+    def index() {
+    }
+    def renderprofileFB(){
+        render(view:"index")
+    }
 }

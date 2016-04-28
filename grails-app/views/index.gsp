@@ -97,7 +97,7 @@
                             <label class="star star-2" for="star-2-mexi"></label>
                             <input class="star star-1" id="star-1-mexi" type="radio" name="star"/>
                             <label class="star star-1" for="star-1-mexi"></label>
-                            <a class="btn btn-primary btn-large" href="${createLink(controller: 'prepare', action: 'prueba')}">this is just a test</a>
+                            <!--<a class="btn btn-primary btn-large" href="${createLink(controller: 'prepare', action: 'prueba')}">this is just a test</a><-->
                         </form>
                     </div>
                 </div>
