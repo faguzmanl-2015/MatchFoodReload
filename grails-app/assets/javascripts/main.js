@@ -115,7 +115,9 @@ $(function() {
             if (response.status === 'connected') {
                 FB.logout(function(response) {
                     appear();
+                    appearLoginButton();
                     $('#facebook-session').remove();
+                    redirect();
                 })
             }
         });
@@ -125,20 +127,26 @@ $(function() {
     $(document).on('click', '#loginFB', function(e){
         e.preventDefault();
         facebookLogin();
+        disappearLoginButton()
     })
 
     $(document).on('click', '#logoutFB', function(e){
         e.preventDefault();
-        if (confirm("¿Está seguro?"))
+        if (confirm("¿Está seguro?")) {
             facebookLogout();
-        else
+        }else
             return false;
     })
 
     function createLink(id,controller,action){
         document.getElementById(id).href = "${createLink(controller: '"+ "\'controller\'"+", action: '"+ "\'index\')}"
     }
-
+    function disappearLoginButton(){
+        document.getElementById("loginFB").style.visibility = "hidden";
+    }
+    function appearLoginButton(){
+        document.getElementById("loginFB").style.visibility = "visible";
+    }
     function disappear ()
     {
         document.getElementById("dropdownNav").style.visibility = "hidden";
@@ -149,5 +157,10 @@ $(function() {
     {
         document.getElementById("dropdownNav").style.visibility = "visible";
         document.getElementById("dropdown-menuNav").style.visibility = "visible";
+    }
+    function redirect(){
+        $(document).on('click', '#logoutFB', function(e){
+            document.getElementById("logoutFB").href= "${createLink(url: '/' , action:'index')}";
+        })
     }
 })

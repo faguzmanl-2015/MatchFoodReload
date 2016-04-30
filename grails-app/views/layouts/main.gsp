@@ -120,10 +120,6 @@
             $(document).on('click', '#reqBtn', function(e){
                 document.getElementById("reqBtn").href= "${createLink(controller: 'orders' , action:'index')}";
             })
-            $(document).on('click', '#logoutFB', function(e){
-                document.getElementById("logoutFB").href= "${createLink(url: '/' , action:'index')}";
-            })
-
         </script>
 		<g:layoutBody/>
         <div class="col-sm-12" style="padding: 20px;background-color: darkgray;">
